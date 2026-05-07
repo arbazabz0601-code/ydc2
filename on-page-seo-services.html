@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>On Page SEO Service - Your Digital Crew</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://yourdigitalcrew.com/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Content wrapper with white background */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Page Main Content */
+        .page-main {
+            padding: 40px 0;
+        }
+        
+        /* ===== ON PAGE SEO PAGE SPECIFIC STYLES WITH ANIMATIONS ===== */
+        
+        /* Hero Section with Animation */
+        .onpage-hero {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+            50% { background: linear-gradient(135deg, #ffffff, #fff0f0); }
+            100% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+        }
+        
+        .onpage-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(204,0,0,0.03) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .onpage-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .onpage-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            animation: slideDown 1s ease-out;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .onpage-hero h1 span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .onpage-hero p {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.8;
+            animation: fadeIn 1.5s ease-out 0.3s both;
+        }
+        
+        /* Quick Connect with Animation */
+        .quick-connect {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            margin: 40px auto;
+            border-radius: 15px;
+            max-width: 800px;
+            border-left: 5px solid #cc0000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: perspective(1000px) rotateX(0deg);
+            transition: all 0.5s;
+            animation: glow 2s infinite;
+        }
+        
+        .quick-connect:hover {
+            transform: perspective(1000px) rotateX(2deg) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(204,0,0,0.2);
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+            50% { box-shadow: 0 15px 40px rgba(204,0,0,0.15); }
+            100% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        }
+        
+        .quick-connect h3 {
+            color: #000;
+            font-size: 26px;
+            margin-bottom: 5px;
+            animation: slideInRight 1s;
+        }
+        
+        .quick-connect p {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        /* Section Title with Animation */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+            animation: fadeInScale 1s;
+        }
+        
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .section-title span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #cc0000;
+            animation: slideLine 3s ease infinite;
+        }
+        
+        @keyframes slideLine {
+            0% { width: 0; left: 0; }
+            50% { width: 100%; left: 0; }
+            100% { width: 0; left: 100%; }
+        }
+        
+        /* Intro Box */
+        .intro-box {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            border: 2px solid #cc0000;
+            box-shadow: 0 15px 40px rgba(204,0,0,0.1);
+            animation: glow 3s infinite;
+        }
+        
+        .intro-box p {
+            font-size: 20px;
+            color: #555;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.15s; }
+        .service-card:nth-child(3) { animation-delay: 0.2s; }
+        .service-card:nth-child(4) { animation-delay: 0.25s; }
+        .service-card:nth-child(5) { animation-delay: 0.3s; }
+        .service-card:nth-child(6) { animation-delay: 0.35s; }
+        .service-card:nth-child(7) { animation-delay: 0.4s; }
+        .service-card:nth-child(8) { animation-delay: 0.45s; }
+        
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: #cc0000;
+            transform: scaleY(0);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #cc0000;
+            box-shadow: 0 20px 40px rgba(204,0,0,0.15);
+        }
+        
+        .service-card i {
+            font-size: 45px;
+            color: #cc0000;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .service-card h3 {
+            color: #000;
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 60px 20px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stat-item {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .stat-item:nth-child(1) { animation-delay: 0.1s; }
+        .stat-item:nth-child(2) { animation-delay: 0.15s; }
+        .stat-item:nth-child(3) { animation-delay: 0.2s; }
+        
+        .stat-item i {
+            font-size: 50px;
+            color: #ffd966;
+            margin-bottom: 15px;
+        }
+        
+        .stat-item h4 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        
+        .stat-item p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Location Tag */
+        .location-tag {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .location-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #cc0000, #990000);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(204,0,0,0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        .location-badge i {
+            margin-right: 10px;
+            color: #ffd966;
+        }
+        
+        /* Talk With Us Section */
+        .talk-section {
+            background: linear-gradient(135deg, #cc0000, #990000);
+            padding: 60px 20px;
+            margin: 40px 0;
+            text-align: center;
+            color: white;
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        .talk-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .talk-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .talk-content h3 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .talk-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .talk-btn {
+            display: inline-block;
+            background: white;
+            color: #cc0000;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.4s;
+            border: 2px solid white;
+        }
+        
+        .talk-btn:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 70px 20px;
+            text-align: center;
+            margin: 50px 0 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            animation: slideInLeft 1s;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            position: relative;
+            animation: slideInRight 1s;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            animation: fadeIn 1.5s;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #cc0000;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.4s;
+            border: 2px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(204,0,0,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-outline:hover {
+            background: white;
+            color: #cc0000;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .onpage-hero h1 {
+                font-size: 36px;
+            }
+            
+            .onpage-hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .quick-connect h3 {
+                font-size: 22px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .location-badge {
+                font-size: 20px;
+                padding: 12px 30px;
+            }
+            
+            .talk-content h3 {
+                font-size: 28px;
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+            
+            .cta-btn {
+                padding: 12px 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .onpage-hero h1 {
+                font-size: 28px;
+            }
+            
+            .intro-box {
+                padding: 30px 20px;
+            }
+            
+            .intro-box p {
+                font-size: 18px;
+            }
+            
+            .location-badge {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+        }
+        
+        /* Animation Classes */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Footer placeholder */
+        #footer {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content wrapper with white background -->
+    <div class="content-wrapper">
+        <!-- HEADER PLACEHOLDER - Your existing header will load here -->
+        <div id="header"></div>
+
+        <!-- ON PAGE SEO PAGE MAIN CONTENT -->
+        <main class="page-main">
+            <!-- Hero Section -->
+            <div class="onpage-hero">
+                <div class="container">
+                    <h1>On Page SEO Service</h1>
+                    <p>In today's digital age, having a website is not enough — your website must be search engine optimized to appear in front of your target audience. On-Page SEO is the foundation of a successful SEO strategy, and at Your Digital Crew, we offer expert On-Page SEO services to help your business rank higher and attract more customers.</p>
+                </div>
+            </div>
+
+            <!-- Quick Connect -->
+            <div class="container">
+                <div class="quick-connect" data-aos="flip-up">
+                    <h3>Quick Connect</h3>
+                    <p>Your Digital Crew – Expert On-Page SEO Services</p>
+                </div>
+            </div>
+
+            <!-- Intro Box -->
+            <div class="container">
+                <div class="intro-box">
+                    <p>Our comprehensive On-Page SEO services ensure that every aspect of your website is optimized for search engines and user experience. From technical audits to content optimization, we've got you covered.</p>
+                </div>
+            </div>
+
+            <!-- What We Offer Section -->
+            <div class="container">
+                <h2 class="section-title">What <span>We Offer</span></h2>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Complete Website SEO Audit</h3>
+                        <p>Thorough analysis of your website to identify issues and opportunities for improvement.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-key"></i>
+                        <h3>Keyword Research & Placement</h3>
+                        <p>Strategic keyword research and optimal placement for maximum visibility.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-tags"></i>
+                        <h3>Meta Tags Optimization</h3>
+                        <p>Optimized titles and meta descriptions to improve click-through rates.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-heading"></i>
+                        <h3>Header Tag (H1-H6) Optimization</h3>
+                        <p>Proper header structure for better readability and SEO.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-link"></i>
+                        <h3>SEO-Friendly URL Structure</h3>
+                        <p>Clean, keyword-rich URLs that search engines love.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-sitemap"></i>
+                        <h3>Internal Linking Strategy</h3>
+                        <p>Smart internal linking to improve navigation and page authority.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-image"></i>
+                        <h3>Image Optimization with Alt Text</h3>
+                        <p>Optimized images with proper alt tags for better visibility.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile & Page Speed Optimization</h3>
+                        <p>Fast-loading, mobile-friendly pages for better user experience.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>200+</h4>
+                            <p>Websites Optimized</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-arrow-up"></i>
+                            <h4>#1</h4>
+                            <p>Rankings Achieved</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-smile"></i>
+                            <h4>98%</h4>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location Tag -->
+            <div class="container">
+                <div class="location-tag">
+                    <div class="location-badge">
+                        <i class="fas fa-map-marker-alt"></i> Onpage Seo Service in Mumbai
+                    </div>
+                </div>
+            </div>
+
+            <!-- Talk With Us Section -->
+            <div class="container">
+                <div class="talk-section">
+                    <div class="talk-content">
+                        <h3>Talk With Us</h3>
+                        <p>Send us a message today and we will contact you as soon as possible.</p>
+                        <a href="#" class="talk-btn"><i class="fas fa-paper-plane"></i> Send Message</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Contact CTA Section -->
+        <div class="cta-section">
+            <div class="container">
+                <h2>Ready to Optimize Your Website?</h2>
+                <p>Get a free On-Page SEO audit and consultation for your website today</p>
+                <div class="cta-buttons">
+                    <a href="tel:+919212320203" class="cta-btn"><i class="fas fa-phone-alt"></i> Call Us: +91-9212320203</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fas fa-envelope"></i> Email Us</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER PLACEHOLDER - Your existing footer will load here -->
+        <div id="footer"></div>
+    </div>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Scripts -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load Header from external file
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Header file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                // Initialize dropdown stabilizer after header loads
+                setTimeout(initDropdownStabilizer, 500);
+            })
+            .catch(err => {
+                console.warn('Header file not loaded. Please ensure header.html exists.');
+                document.getElementById('header').innerHTML = `
+                    <div style="background: #000; color: white; padding: 15px; text-align: center;">
+                        Header not loaded. Please check header.html file.
+                    </div>
+                `;
+            });
+
+        // Load Footer from external file
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Footer file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(err => {
+                console.warn('Footer file not loaded. Using fallback footer.');
+                document.getElementById('footer').innerHTML = `
+                    <footer style="background: #000; color: white; text-align: center; padding: 30px; border-top: 3px solid #cc0000;">
+                        <p>© 2025 Your Digital Crew. All rights reserved.</p>
+                        <p><i class="fas fa-phone-alt"></i> +91-9212320203 | <i class="fas fa-envelope"></i> info@yourdigitalcrew.com</p>
+                    </footer>
+                `;
+            });
+
+        // Dropdown Stabilizer Function
+        function initDropdownStabilizer() {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const dropdown = item.querySelector('.dropdown, .mega-menu, .dropdown-submenu-content');
+                if (!dropdown) return;
+                
+                let timeoutId;
+                
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                    dropdown.style.opacity = '1';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.transform = 'translateY(4px)';
+                });
+                
+                item.addEventListener('mouseleave', (e) => {
+                    const relatedTarget = e.relatedTarget;
+                    if (dropdown.contains(relatedTarget)) return;
+                    
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 300);
+                });
+                
+                dropdown.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                });
+                
+                dropdown.addEventListener('mouseleave', () => {
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 200);
+                });
+            });
+        }
+
+        // Sticky Header Function
+        function initStickyHeader() {
+            const headerWrapper = document.querySelector('.header-wrapper');
+            if (headerWrapper) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        headerWrapper.classList.add('scrolled');
+                    } else {
+                        headerWrapper.classList.remove('scrolled');
+                    }
+                });
+            }
+        }
+
+        // Call sticky header after page loads
+        window.addEventListener('load', function() {
+            initStickyHeader();
+        });
+    </script>
+</body>
+</html>

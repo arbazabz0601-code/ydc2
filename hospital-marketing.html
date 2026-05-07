@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Hospital Marketing Services - Your Digital Crew</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://yourdigitalcrew.com/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Content wrapper with white background */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Page Main Content */
+        .page-main {
+            padding: 40px 0;
+        }
+        
+        /* ===== HOSPITAL MARKETING PAGE SPECIFIC STYLES WITH ANIMATIONS ===== */
+        
+        /* Hero Section with Animation */
+        .hospital-hero {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+            50% { background: linear-gradient(135deg, #ffffff, #fff0f0); }
+            100% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+        }
+        
+        .hospital-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(204,0,0,0.03) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .hospital-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hospital-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            animation: slideDown 1s ease-out;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .hospital-hero h1 span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .hospital-hero h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #cc0000;
+            margin-bottom: 20px;
+            animation: slideUp 1s ease-out 0.2s both;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hospital-hero h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #cc0000;
+            animation: expandWidth 1.5s ease-out infinite;
+        }
+        
+        @keyframes expandWidth {
+            0% { width: 50px; opacity: 0.5; }
+            50% { width: 120px; opacity: 1; }
+            100% { width: 50px; opacity: 0.5; }
+        }
+        
+        .hospital-hero p {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.8;
+            animation: fadeIn 1.5s ease-out 0.3s both;
+        }
+        
+        /* Quick Connect with Animation */
+        .quick-connect {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            margin: 40px auto;
+            border-radius: 15px;
+            max-width: 800px;
+            border-left: 5px solid #cc0000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: perspective(1000px) rotateX(0deg);
+            transition: all 0.5s;
+            animation: glow 2s infinite;
+        }
+        
+        .quick-connect:hover {
+            transform: perspective(1000px) rotateX(2deg) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(204,0,0,0.2);
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+            50% { box-shadow: 0 15px 40px rgba(204,0,0,0.15); }
+            100% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        }
+        
+        .quick-connect h3 {
+            color: #000;
+            font-size: 26px;
+            margin-bottom: 5px;
+            animation: slideInRight 1s;
+        }
+        
+        .quick-connect p {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        /* Section Title with Animation */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+            animation: fadeInScale 1s;
+        }
+        
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .section-title span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #cc0000;
+            animation: slideLine 3s ease infinite;
+        }
+        
+        @keyframes slideLine {
+            0% { width: 0; left: 0; }
+            50% { width: 100%; left: 0; }
+            100% { width: 0; left: 100%; }
+        }
+        
+        /* Intro Box */
+        .intro-box {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            border: 2px solid #cc0000;
+            box-shadow: 0 15px 40px rgba(204,0,0,0.1);
+            animation: glow 3s infinite;
+        }
+        
+        .intro-box p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.15s; }
+        .service-card:nth-child(3) { animation-delay: 0.2s; }
+        .service-card:nth-child(4) { animation-delay: 0.25s; }
+        .service-card:nth-child(5) { animation-delay: 0.3s; }
+        .service-card:nth-child(6) { animation-delay: 0.35s; }
+        .service-card:nth-child(7) { animation-delay: 0.4s; }
+        .service-card:nth-child(8) { animation-delay: 0.45s; }
+        .service-card:nth-child(9) { animation-delay: 0.5s; }
+        .service-card:nth-child(10) { animation-delay: 0.55s; }
+        
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: #cc0000;
+            transform: scaleY(0);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #cc0000;
+            box-shadow: 0 20px 40px rgba(204,0,0,0.15);
+        }
+        
+        .service-card i {
+            font-size: 40px;
+            color: #cc0000;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .service-card h3 {
+            color: #000;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .feature-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #cc0000;
+            animation: slideInLeft 0.5s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .feature-item:nth-child(1) { animation-delay: 0.1s; }
+        .feature-item:nth-child(2) { animation-delay: 0.15s; }
+        .feature-item:nth-child(3) { animation-delay: 0.2s; }
+        .feature-item:nth-child(4) { animation-delay: 0.25s; }
+        .feature-item:nth-child(5) { animation-delay: 0.3s; }
+        .feature-item:nth-child(6) { animation-delay: 0.35s; }
+        .feature-item:nth-child(7) { animation-delay: 0.4s; }
+        .feature-item:nth-child(8) { animation-delay: 0.45s; }
+        
+        .feature-item i {
+            color: #cc0000;
+            margin-right: 10px;
+        }
+        
+        .feature-item span {
+            font-weight: 500;
+            color: #555;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 60px 20px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stat-item {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .stat-item:nth-child(1) { animation-delay: 0.1s; }
+        .stat-item:nth-child(2) { animation-delay: 0.15s; }
+        .stat-item:nth-child(3) { animation-delay: 0.2s; }
+        
+        .stat-item i {
+            font-size: 50px;
+            color: #ffd966;
+            margin-bottom: 15px;
+        }
+        
+        .stat-item h4 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        
+        .stat-item p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Expertise Section */
+        .expertise-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            border: 2px solid #cc0000;
+        }
+        
+        .expertise-section p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        /* Doctor Types */
+        .doctor-types {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .doctor-tag {
+            background: white;
+            color: #cc0000;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+            border: 2px solid #cc0000;
+            transition: all 0.3s;
+            animation: float 3s ease infinite;
+        }
+        
+        .doctor-tag:nth-child(1) { animation-delay: 0.1s; }
+        .doctor-tag:nth-child(2) { animation-delay: 0.2s; }
+        .doctor-tag:nth-child(3) { animation-delay: 0.3s; }
+        .doctor-tag:nth-child(4) { animation-delay: 0.4s; }
+        .doctor-tag:nth-child(5) { animation-delay: 0.5s; }
+        .doctor-tag:nth-child(6) { animation-delay: 0.6s; }
+        
+        .doctor-tag:hover {
+            background: #cc0000;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Locations */
+        .locations {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .location-item {
+            background: #cc0000;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+        
+        .location-item:nth-child(1) { animation-delay: 0.1s; }
+        .location-item:nth-child(2) { animation-delay: 0.2s; }
+        .location-item:nth-child(3) { animation-delay: 0.3s; }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 70px 20px;
+            text-align: center;
+            margin: 50px 0 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            animation: slideInLeft 1s;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            position: relative;
+            animation: slideInRight 1s;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            animation: fadeIn 1.5s;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #cc0000;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.4s;
+            border: 2px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(204,0,0,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-outline:hover {
+            background: white;
+            color: #cc0000;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hospital-hero h1 {
+                font-size: 36px;
+            }
+            
+            .hospital-hero h2 {
+                font-size: 28px;
+            }
+            
+            .hospital-hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .quick-connect h3 {
+                font-size: 22px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .locations {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .location-item {
+                width: 80%;
+                text-align: center;
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+            
+            .cta-btn {
+                padding: 12px 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hospital-hero h1 {
+                font-size: 28px;
+            }
+            
+            .intro-box {
+                padding: 30px 20px;
+            }
+            
+            .intro-box p {
+                font-size: 16px;
+            }
+        }
+        
+        /* Animation Classes */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Footer placeholder */
+        #footer {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content wrapper with white background -->
+    <div class="content-wrapper">
+        <!-- HEADER PLACEHOLDER - Your existing header will load here -->
+        <div id="header"></div>
+
+        <!-- HOSPITAL MARKETING PAGE MAIN CONTENT -->
+        <main class="page-main">
+            <!-- Hero Section -->
+            <div class="hospital-hero">
+                <div class="container">
+                    <h1>Hospital Marketing Services</h1>
+                    <h2>Your Digital Crew – Expert in Doctor and Clinic Promotion</h2>
+                    <p>In today's digital age, patients search for healthcare services online before visiting a clinic. That's where Your Digital Crew comes in. We are a trusted digital marketing company specializing in promoting doctors, clinics, hospitals, and healthcare providers. With branches in Delhi, Noida and Varanasi, we provide end-to-end digital solutions to make your medical practice visible, credible, and successful online.</p>
+                </div>
+            </div>
+
+            <!-- Quick Connect -->
+            <div class="container">
+                <div class="quick-connect" data-aos="flip-up">
+                    <h3>Quick Connect</h3>
+                    <p>Your Digital Crew – Expert Healthcare Digital Marketing</p>
+                </div>
+            </div>
+
+            <!-- Intro Box -->
+            <div class="container">
+                <div class="intro-box">
+                    <p>Our services start with a professional, SEO-friendly website designed especially for doctors and clinics. Whether you're a general physician, dentist, gynecologist, or multi-specialty clinic, we create websites that reflect your expertise and help patients find the right information with ease. We also integrate appointment booking systems, WhatsApp chat, patient feedback forms, and location maps.</p>
+                </div>
+            </div>
+
+            <!-- Locations -->
+            <div class="container">
+                <div class="locations">
+                    <div class="location-item">Delhi NCR</div>
+                    <div class="location-item">Noida</div>
+                    <div class="location-item">Varanasi</div>
+                </div>
+            </div>
+
+            <!-- Our Services Section -->
+            <div class="container">
+                <h2 class="section-title">Our <span>Services</span> Include</h2>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-laptop-medical"></i>
+                        <h3>Website Design for Doctors & Clinics</h3>
+                        <p>Professional, SEO-friendly websites with appointment booking and patient forms.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fab fa-google"></i>
+                        <h3>Google My Business (GMB) Setup & Management</h3>
+                        <p>Complete GMB optimization for local visibility and patient engagement.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-ad"></i>
+                        <h3>Google Ads (Search, Display & Local Campaigns)</h3>
+                        <p>Targeted advertising to reach patients searching for healthcare services.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-search"></i>
+                        <h3>SEO for Medical Keywords</h3>
+                        <p>Rank higher for medical terms and attract more patients organically.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fab fa-facebook"></i>
+                        <h3>Facebook & Instagram Ads for Healthcare</h3>
+                        <p>Social media campaigns targeting local patients based on interests.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fab fa-youtube"></i>
+                        <h3>YouTube Video Promotion</h3>
+                        <p>Video content marketing to build trust and showcase expertise.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Appointment Integration & Lead Tracking</h3>
+                        <p>Seamless booking systems and patient lead management.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-star"></i>
+                        <h3>Online Reputation & Review Management</h3>
+                        <p>Build trust with positive reviews and professional feedback handling.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Local SEO for City-Based Searches</h3>
+                        <p>Dominate local search results for "near me" healthcare queries.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-database"></i>
+                        <h3>CRM solutions for clinics</h3>
+                        <p>Patient management systems to streamline clinic operations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Features -->
+            <div class="container">
+                <h2 class="section-title">What Makes Us <span>Different</span></h2>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i> <span>Professional website design with appointment booking</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i> <span>WhatsApp chat integration for instant patient communication</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i> <span>Patient feedback forms and reviews management</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i> <span>Google Maps integration for easy location access</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i> <span>Targeted Google Ads for local healthcare searches</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i> <span>Specialized social media campaigns for doctors</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i> <span>Reputation management to build patient trust</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i> <span>Custom digital plans based on specialty and location</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor Types -->
+            <div class="container">
+                <div class="doctor-types">
+                    <span class="doctor-tag">General Physician</span>
+                    <span class="doctor-tag">Dentist</span>
+                    <span class="doctor-tag">Gynecologist</span>
+                    <span class="doctor-tag">Pediatrician</span>
+                    <span class="doctor-tag">Orthopedic</span>
+                    <span class="doctor-tag">Cardiologist</span>
+                    <span class="doctor-tag">Homeopathy</span>
+                    <span class="doctor-tag">Ayurvedic</span>
+                    <span class="doctor-tag">Path Lab</span>
+                    <span class="doctor-tag">Multi-Specialty</span>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-hospital"></i>
+                            <h4>100+</h4>
+                            <p>Healthcare Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-user-md"></i>
+                            <h4>50+</h4>
+                            <p>Doctors Promoted</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-smile"></i>
+                            <h4>10k+</h4>
+                            <p>Patient Appointments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expertise Section -->
+            <div class="container">
+                <div class="expertise-section">
+                    <p>We have proudly worked with doctors, surgeons, path labs, homeopathy clinics, ayurvedic centers, and hospitals, helping them build a strong digital presence and increase patient footfall.</p>
+                </div>
+            </div>
+
+            <!-- Final CTA -->
+            <div class="container">
+                <div class="quick-connect" style="background: linear-gradient(135deg, #ffffff, #f8f9fa);">
+                    <p style="font-size: 18px;">If you are a doctor or clinic owner looking to grow your practice digitally, contact Your Digital Crew today. Visit our offices in Delhi, Noida or Varanasi, or call us for a free consultation. We are committed to helping the healthcare industry thrive through smart, strategic digital marketing.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Contact CTA Section -->
+        <div class="cta-section">
+            <div class="container">
+                <h2>Ready to Grow Your Healthcare Practice?</h2>
+                <p>Get a free digital marketing consultation for your clinic or hospital today</p>
+                <div class="cta-buttons">
+                    <a href="tel:+919212320203" class="cta-btn"><i class="fas fa-phone-alt"></i> Call Us: +91-9212320203</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fas fa-envelope"></i> Email Us</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER PLACEHOLDER - Your existing footer will load here -->
+        <div id="footer"></div>
+    </div>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Scripts -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load Header from external file
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Header file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                // Initialize dropdown stabilizer after header loads
+                setTimeout(initDropdownStabilizer, 500);
+            })
+            .catch(err => {
+                console.warn('Header file not loaded. Please ensure header.html exists.');
+                document.getElementById('header').innerHTML = `
+                    <div style="background: #000; color: white; padding: 15px; text-align: center;">
+                        Header not loaded. Please check header.html file.
+                    </div>
+                `;
+            });
+
+        // Load Footer from external file
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Footer file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(err => {
+                console.warn('Footer file not loaded. Using fallback footer.');
+                document.getElementById('footer').innerHTML = `
+                    <footer style="background: #000; color: white; text-align: center; padding: 30px; border-top: 3px solid #cc0000;">
+                        <p>© 2025 Your Digital Crew. All rights reserved.</p>
+                        <p><i class="fas fa-phone-alt"></i> +91-9212320203 | <i class="fas fa-envelope"></i> info@yourdigitalcrew.com</p>
+                    </footer>
+                `;
+            });
+
+        // Dropdown Stabilizer Function
+        function initDropdownStabilizer() {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const dropdown = item.querySelector('.dropdown, .mega-menu, .dropdown-submenu-content');
+                if (!dropdown) return;
+                
+                let timeoutId;
+                
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                    dropdown.style.opacity = '1';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.transform = 'translateY(4px)';
+                });
+                
+                item.addEventListener('mouseleave', (e) => {
+                    const relatedTarget = e.relatedTarget;
+                    if (dropdown.contains(relatedTarget)) return;
+                    
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 300);
+                });
+                
+                dropdown.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                });
+                
+                dropdown.addEventListener('mouseleave', () => {
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 200);
+                });
+            });
+        }
+
+        // Sticky Header Function
+        function initStickyHeader() {
+            const headerWrapper = document.querySelector('.header-wrapper');
+            if (headerWrapper) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        headerWrapper.classList.add('scrolled');
+                    } else {
+                        headerWrapper.classList.remove('scrolled');
+                    }
+                });
+            }
+        }
+
+        // Call sticky header after page loads
+        window.addEventListener('load', function() {
+            initStickyHeader();
+        });
+    </script>
+</body>
+</html>

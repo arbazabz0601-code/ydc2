@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Latest News - Your Digital Crew | Website Design, SEO & CRM Services</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://yourdigitalcrew.com/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Content wrapper with white background */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Page Main Content */
+        .page-main {
+            padding: 40px 0;
+        }
+        
+        /* ===== BLOG PAGE SPECIFIC STYLES WITH ANIMATIONS ===== */
+        
+        /* Hero Section with Animation */
+        .blog-hero {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+            50% { background: linear-gradient(135deg, #ffffff, #fff0f0); }
+            100% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+        }
+        
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(204,0,0,0.03) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .blog-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .blog-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            animation: slideDown 1s ease-out;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .blog-hero h1 span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .blog-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.8;
+            animation: fadeIn 1.5s ease-out 0.3s both;
+        }
+        
+        /* Quick Connect with Animation */
+        .quick-connect {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            margin: 40px auto;
+            border-radius: 15px;
+            max-width: 800px;
+            border-left: 5px solid #cc0000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: perspective(1000px) rotateX(0deg);
+            transition: all 0.5s;
+            animation: glow 2s infinite;
+        }
+        
+        .quick-connect:hover {
+            transform: perspective(1000px) rotateX(2deg) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(204,0,0,0.2);
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+            50% { box-shadow: 0 15px 40px rgba(204,0,0,0.15); }
+            100% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        }
+        
+        .quick-connect h3 {
+            color: #000;
+            font-size: 26px;
+            margin-bottom: 5px;
+            animation: slideInRight 1s;
+        }
+        
+        .quick-connect p {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        /* Section Title with Animation */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+            animation: fadeInScale 1s;
+        }
+        
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .section-title span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #cc0000;
+            animation: slideLine 3s ease infinite;
+        }
+        
+        @keyframes slideLine {
+            0% { width: 0; left: 0; }
+            50% { width: 100%; left: 0; }
+            100% { width: 0; left: 100%; }
+        }
+        
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .blog-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+            border: 1px solid #e0e0e0;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+            position: relative;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(204,0,0,0.15);
+            border-color: #cc0000;
+        }
+        
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .blog-image {
+            position: relative;
+            overflow: hidden;
+            height: 220px;
+            background: linear-gradient(135deg, #cc0000, #990000);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .blog-image i {
+            font-size: 60px;
+            color: rgba(255,255,255,0.8);
+            transition: transform 0.4s;
+        }
+        
+        .blog-card:hover .blog-image i {
+            transform: scale(1.1);
+        }
+        
+        .blog-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        
+        .blog-card:hover .blog-image::before {
+            opacity: 1;
+        }
+        
+        .blog-content {
+            padding: 25px;
+        }
+        
+        .blog-category {
+            display: inline-block;
+            background: #cc0000;
+            color: white;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .blog-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            transition: color 0.3s;
+        }
+        
+        .blog-card:hover .blog-title {
+            color: #cc0000;
+        }
+        
+        .blog-excerpt {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .blog-meta i {
+            margin-right: 5px;
+            color: #cc0000;
+        }
+        
+        .read-more {
+            color: #cc0000;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .read-more:hover {
+            gap: 10px;
+            color: #000;
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+        
+        .page-btn {
+            background: #f8f9fa;
+            color: #333;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .page-btn:hover, .page-btn.active {
+            background: #cc0000;
+            color: white;
+            border-color: #cc0000;
+            transform: translateY(-3px);
+        }
+        
+        /* Sidebar */
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .sidebar-widget {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+        
+        .sidebar-widget:hover {
+            border-color: #cc0000;
+            box-shadow: 0 10px 30px rgba(204,0,0,0.1);
+        }
+        
+        .widget-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .widget-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #cc0000;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        
+        .search-box button {
+            background: #cc0000;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .search-box button:hover {
+            background: #000;
+            transform: scale(1.05);
+        }
+        
+        .categories-list {
+            list-style: none;
+        }
+        
+        .categories-list li {
+            margin-bottom: 12px;
+        }
+        
+        .categories-list a {
+            color: #555;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            transition: all 0.3s;
+            padding: 5px 0;
+        }
+        
+        .categories-list a:hover {
+            color: #cc0000;
+            padding-left: 10px;
+        }
+        
+        .recent-post {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .recent-post-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #cc0000, #990000);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .recent-post-icon i {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .recent-post-content h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .recent-post-content a {
+            color: #000;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .recent-post-content a:hover {
+            color: #cc0000;
+        }
+        
+        .recent-post-content p {
+            font-size: 11px;
+            color: #999;
+        }
+        
+        /* Newsletter Widget */
+        .newsletter-widget {
+            text-align: center;
+        }
+        
+        .newsletter-widget i {
+            font-size: 40px;
+            color: #cc0000;
+            margin-bottom: 15px;
+        }
+        
+        .newsletter-widget h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .newsletter-widget p {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .newsletter-widget input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .newsletter-widget button {
+            width: 100%;
+            background: #cc0000;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .newsletter-widget button:hover {
+            background: #000;
+            transform: translateY(-3px);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 70px 20px;
+            text-align: center;
+            margin: 50px 0 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        @keyframes pulse-bg {
+            0% { background: linear-gradient(135deg, #cc0000, #8b0000); }
+            50% { background: linear-gradient(135deg, #d00, #a00); }
+            100% { background: linear-gradient(135deg, #cc0000, #8b0000); }
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            animation: slideInLeft 1s;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            position: relative;
+            animation: slideInRight 1s;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            animation: fadeIn 1.5s;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #cc0000;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.4s;
+            border: 2px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(204,0,0,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-outline:hover {
+            background: white;
+            color: #cc0000;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+                margin-top: 40px;
+            }
+            
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 36px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .blog-hero h1 {
+                font-size: 28px;
+            }
+        }
+        
+        /* Animation Classes */
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Footer placeholder */
+        #footer {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content wrapper with white background -->
+    <div class="content-wrapper">
+        <!-- HEADER PLACEHOLDER -->
+        <div id="header"></div>
+
+        <!-- BLOG PAGE MAIN CONTENT -->
+        <main class="page-main">
+            <!-- Hero Section -->
+            <div class="blog-hero">
+                <div class="container">
+                    <h1>Latest <span>News</span></h1>
+                    <p>Stay updated with the latest trends, tips, and insights from Your Digital Crew</p>
+                </div>
+            </div>
+
+            <!-- Quick Connect -->
+            <div class="container">
+                <div class="quick-connect" data-aos="flip-up">
+                    <h3>Your Digital Crew</h3>
+                    <p>Your Trusted Partner for Website Design, SEO & Digital Marketing</p>
+                </div>
+            </div>
+
+            <!-- Blog Layout -->
+            <div class="container">
+                <div class="blog-layout">
+                    <!-- Main Content -->
+                    <div>
+                        <div class="blog-grid" id="blogGrid">
+                            <!-- Blog posts will be loaded here dynamically -->
+                        </div>
+                        
+                        <!-- Pagination -->
+                        <div class="pagination" id="pagination">
+                            <!-- Pagination will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar -->
+                    <div class="sidebar">
+                        <!-- Search Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Search</h3>
+                            <div class="search-box">
+                                <input type="text" placeholder="Search articles..." id="searchInput">
+                                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Categories Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Categories</h3>
+                            <ul class="categories-list">
+                                <li><a href="#">Website Design <span>(12)</span></a></li>
+                                <li><a href="#">SEO Services <span>(8)</span></a></li>
+                                <li><a href="#">Google Promotion <span>(10)</span></a></li>
+                                <li><a href="#">Social Media Marketing <span>(6)</span></a></li>
+                                <li><a href="#">CRM Software <span>(4)</span></a></li>
+                                <li><a href="#">Digital Marketing <span>(15)</span></a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Recent Posts Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Recent Posts</h3>
+                            <div id="recentPosts"></div>
+                        </div>
+                        
+                        <!-- Newsletter Widget -->
+                        <div class="sidebar-widget newsletter-widget">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <h4>Subscribe to Our Newsletter</h4>
+                            <p>Get the latest updates and offers directly in your inbox</p>
+                            <input type="email" placeholder="Your Email Address">
+                            <button>Subscribe Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <div class="container">
+                <h2>Ready to Grow Your Business?</h2>
+                <p>Let's discuss how we can help you achieve your digital goals</p>
+                <div class="cta-buttons">
+                    <a href="tel:+919212320203" class="cta-btn"><i class="fas fa-phone-alt"></i> Call Us: +91-9212320203</a>
+                    <a href="contact.html" class="cta-btn cta-btn-outline"><i class="fas fa-envelope"></i> Contact Us</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER PLACEHOLDER -->
+        <div id="footer"></div>
+    </div>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Blog Data -->
+    <script>
+        // Blog Posts Data (from your provided content)
+        const blogPosts = [
+            { title: "Website Design Service in Varanasi", category: "Website Design", excerpt: "Google Promotion & Website Design in Varanasi – Your Digital Crew. Varanasi, the spiritual capital of India, is rapidly embracing digital transformation...", date: "Dec 15, 2024", readTime: "3 min read" },
+            { title: "Google Promotion Company In Varanasi", category: "Google Promotion", excerpt: "Google Promotion in Varanasi – Grow Your Business Online with Your Digital Crew. Varanasi is not only known for its cultural heritage but also emerging as a digital hub...", date: "Dec 12, 2024", readTime: "4 min read" },
+            { title: "SEO SERVICES IN DELHI", category: "SEO", excerpt: "Google Promotion Service in Noida – Grow Your Business with Local SEO strategies. Noida's business landscape is evolving rapidly...", date: "Dec 10, 2024", readTime: "3 min read" },
+            { title: "Website Design Service in Jaunpur", category: "Website Design", excerpt: "Website Designing Services in Jaunpur-Call 9212320203. Your Digital Crew is a digital-based company in Jaunpur offering complete web solutions...", date: "Dec 8, 2024", readTime: "4 min read" },
+            { title: "Social Media Marketing in Delhi", category: "Social Media", excerpt: "Social Media Marketing Service in Delhi. Why Social Media Marketing is Essential in Today's Digital Age for business growth and brand awareness...", date: "Dec 5, 2024", readTime: "3 min read" },
+            { title: "Website Designing Company in Jaunpur", category: "Website Design", excerpt: "Website Designing Company In Jaunpur Uttar Pradesh. Your Digital Crew – Now in Jaunpur Near TD College, offering professional web design services...", date: "Dec 3, 2024", readTime: "4 min read" },
+            { title: "Website Design Company in Jaunpur", category: "Website Design", excerpt: "Best Website Design & Digital Marketing Company in Jaunpur. Your Digital Crew delivers stunning, responsive websites tailored to your business...", date: "Nov 30, 2024", readTime: "3 min read" },
+            { title: "Website Designing in South Delhi", category: "Website Design", excerpt: "Your Digital Crew – South Delhi's Best Website Designing & SEO Service Provider. We help businesses in South Delhi establish a strong online presence...", date: "Nov 28, 2024", readTime: "4 min read" },
+            { title: "Website Design Company in Jaunpur UP", category: "Website Design", excerpt: "Website Design Company in Jaunpur Uttar Pradesh. Your Digital Crew Now in Jaunpur – Empowering local businesses with digital solutions...", date: "Nov 25, 2024", readTime: "3 min read" },
+            { title: "Website Designing Company Near Me", category: "Website Design", excerpt: "At Your Digital Crew, we don't just market — we bring customers to your doorstep with strategic digital solutions tailored for local businesses...", date: "Nov 22, 2024", readTime: "3 min read" },
+            { title: "Social Media Promotion", category: "Social Media", excerpt: "Make your brand unforgettable with professionally designed Instagram posts, stories, and strategic social media campaigns that drive engagement...", date: "Nov 20, 2024", readTime: "4 min read" },
+            { title: "Why Social Media is Essential for Business Branding in 2025", category: "Social Media", excerpt: "In today's digital world, social media is the heartbeat of brand communication. Learn why your business needs a strong social media presence...", date: "Nov 18, 2024", readTime: "5 min read" },
+            { title: "Why Your Digital Crew is the Best Choice for Growing Your Business Online", category: "Digital Marketing", excerpt: "In today's digital-first world, choosing the right digital marketing partner is crucial. Discover why Your Digital Crew stands out...", date: "Nov 15, 2024", readTime: "4 min read" },
+            { title: "Google Promotion Service in Delhi", category: "Google Promotion", excerpt: "Google Promotion Service in Delhi NCR – Your Digital Crew. Are you looking for the best Google Promotion services in Delhi? Look no further...", date: "Nov 12, 2024", readTime: "3 min read" },
+            { title: "Website Design Company in Faridabad", category: "Website Design", excerpt: "Your Digital Crew: The Best Website Design Company in Faridabad. In today's digital-first world, having a professional website is essential...", date: "Nov 10, 2024", readTime: "4 min read" },
+            { title: "Web Design Company in Jaunpur", category: "Website Design", excerpt: "Your Digital Crew: The Best Website Design Company in Jaunpur. In the heart of Uttar Pradesh, Jaunpur is emerging as a business hub...", date: "Nov 8, 2024", readTime: "3 min read" },
+            { title: "Google Ads Agency in Delhi", category: "Google Promotion", excerpt: "Your Digital Crew: The Premier Google Ads Agency in Delhi. Maximize your ROI with targeted Google Ads campaigns...", date: "Nov 5, 2024", readTime: "4 min read" },
+            { title: "Google Promotion Company for Scrap Business", category: "Google Promotion", excerpt: "If you are running a scrap buying business and want to get more customers online, Google Promotion is the key to your success...", date: "Nov 3, 2024", readTime: "3 min read" },
+            { title: "Google Promotion Services in India", category: "Google Promotion", excerpt: "Your Digital Crew: The Best Google Promotion Company in Delhi. We help businesses across India grow with strategic Google advertising...", date: "Oct 30, 2024", readTime: "4 min read" },
+            { title: "SEO Promotion Company In Delhi", category: "SEO", excerpt: "Elevate Your Online Presence with Professional Website Design Services and SEO strategies that drive organic traffic and generate leads...", date: "Oct 28, 2024", readTime: "3 min read" },
+            { title: "Google Promotion Company In Delhi", category: "Google Promotion", excerpt: "Why Digital Marketing is Essential for Businesses and Why Choose Your Digital Crew for your Google Promotion needs...", date: "Oct 25, 2024", readTime: "4 min read" },
+            { title: "Best Website Design Company in Delhi NCR", category: "Website Design", excerpt: "Best Website Designing Delhi. In today's digital-first world, your website is your most powerful marketing tool...", date: "Oct 22, 2024", readTime: "3 min read" },
+            { title: "SEO Promotion In Delhi", category: "SEO", excerpt: "Promote Your Website on Google with SEO and Ads. In today's digital world, promoting your website effectively is crucial for success...", date: "Oct 20, 2024", readTime: "4 min read" },
+            { title: "Local SEO Services Expert in Delhi", category: "SEO", excerpt: "Local SEO Services: Why They Are Crucial for Your Business. In today's competitive market, local SEO helps you reach nearby customers...", date: "Oct 18, 2024", readTime: "3 min read" },
+            { title: "Google Promotion Service in Delhi", category: "Google Promotion", excerpt: "Google Promotion Service in Delhi – Call 7982906829. In today's competitive digital landscape, having a strong online presence is non-negotiable...", date: "Oct 15, 2024", readTime: "4 min read" },
+            { title: "Web Design Company in Jaunpur - Google Promotion", category: "Website Design", excerpt: "Google Promotion Services in Delhi. Are you looking to grow your business and reach a wider audience in Delhi NCR? Google Promotion is the answer...", date: "Oct 12, 2024", readTime: "3 min read" }
+        ];
+
+        let currentPage = 1;
+        const postsPerPage = 9;
+        
+        function getCategoryIcon(category) {
+            switch(category) {
+                case 'Website Design': return 'fa-code';
+                case 'Google Promotion': return 'fa-google';
+                case 'SEO': return 'fa-search';
+                case 'Social Media': return 'fa-share-alt';
+                case 'Digital Marketing': return 'fa-chart-line';
+                default: return 'fa-newspaper';
+            }
+        }
+        
+        function renderBlogPosts() {
+            const start = (currentPage - 1) * postsPerPage;
+            const end = start + postsPerPage;
+            const pagePosts = blogPosts.slice(start, end);
+            
+            const blogGrid = document.getElementById('blogGrid');
+            blogGrid.innerHTML = pagePosts.map((post, index) => `
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="${index * 50}">
+                    <div class="blog-image">
+                        <i class="fas ${getCategoryIcon(post.category)}"></i>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">${post.category}</span>
+                        <h3 class="blog-title">${post.title}</h3>
+                        <p class="blog-excerpt">${post.excerpt.substring(0, 120)}...</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar-alt"></i> ${post.date}</span>
+                            <span><i class="far fa-clock"></i> ${post.readTime}</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            `).join('');
+            
+            renderPagination();
+            renderRecentPosts();
+        }
+        
+        function renderPagination() {
+            const totalPages = Math.ceil(blogPosts.length / postsPerPage);
+            const pagination = document.getElementById('pagination');
+            
+            let html = '';
+            for(let i = 1; i <= totalPages; i++) {
+                html += `<a href="#" class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</a>`;
+            }
+            pagination.innerHTML = html;
+            
+            document.querySelectorAll('.page-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    currentPage = parseInt(btn.dataset.page);
+                    renderBlogPosts();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+        }
+        
+        function renderRecentPosts() {
+            const recentPosts = blogPosts.slice(0, 5);
+            const recentPostsContainer = document.getElementById('recentPosts');
+            recentPostsContainer.innerHTML = recentPosts.map(post => `
+                <div class="recent-post">
+                    <div class="recent-post-icon">
+                        <i class="fas ${getCategoryIcon(post.category)}"></i>
+                    </div>
+                    <div class="recent-post-content">
+                        <h4><a href="#">${post.title}</a></h4>
+                        <p><i class="far fa-calendar-alt"></i> ${post.date}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Search functionality
+        document.getElementById('searchBtn')?.addEventListener('click', () => {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            if(searchTerm) {
+                const filteredPosts = blogPosts.filter(post => 
+                    post.title.toLowerCase().includes(searchTerm) || 
+                    post.excerpt.toLowerCase().includes(searchTerm)
+                );
+                alert(`Found ${filteredPosts.length} articles matching "${searchTerm}"`);
+            }
+        });
+        
+        // Newsletter subscription
+        document.querySelector('.newsletter-widget button')?.addEventListener('click', () => {
+            const email = document.querySelector('.newsletter-widget input').value;
+            if(email) {
+                alert(`Thank you for subscribing! We'll send updates to ${email}`);
+                document.querySelector('.newsletter-widget input').value = '';
+            } else {
+                alert('Please enter a valid email address');
+            }
+        });
+    </script>
+    
+    <!-- Main Scripts -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load Header from external file
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Header file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                setTimeout(initDropdownStabilizer, 500);
+            })
+            .catch(err => {
+                console.warn('Header file not loaded.');
+                document.getElementById('header').innerHTML = `
+                    <div style="background: #000; color: white; padding: 15px; text-align: center;">
+                        Header not loaded. Please check header.html file.
+                    </div>
+                `;
+            });
+
+        // Load Footer from external file
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Footer file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(err => {
+                console.warn('Footer file not loaded.');
+                document.getElementById('footer').innerHTML = `
+                    <footer style="background: #000; color: white; text-align: center; padding: 30px; border-top: 3px solid #cc0000;">
+                        <p>© 2025 Your Digital Crew. All rights reserved.</p>
+                        <p><i class="fas fa-phone-alt"></i> +91-9212320203 | <i class="fas fa-envelope"></i> info@yourdigitalcrew.com</p>
+                    </footer>
+                `;
+            });
+
+        // Dropdown Stabilizer Function
+        function initDropdownStabilizer() {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const dropdown = item.querySelector('.dropdown, .mega-menu, .dropdown-submenu-content');
+                if (!dropdown) return;
+                
+                let timeoutId;
+                
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                    dropdown.style.opacity = '1';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.transform = 'translateY(4px)';
+                });
+                
+                item.addEventListener('mouseleave', (e) => {
+                    const relatedTarget = e.relatedTarget;
+                    if (dropdown.contains(relatedTarget)) return;
+                    
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 300);
+                });
+                
+                dropdown.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                });
+                
+                dropdown.addEventListener('mouseleave', () => {
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 200);
+                });
+            });
+        }
+
+        // Sticky Header Function
+        function initStickyHeader() {
+            const headerWrapper = document.querySelector('.header-wrapper');
+            if (headerWrapper) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        headerWrapper.classList.add('scrolled');
+                    } else {
+                        headerWrapper.classList.remove('scrolled');
+                    }
+                });
+            }
+        }
+
+        window.addEventListener('load', function() {
+            initStickyHeader();
+            renderBlogPosts();
+        });
+    </script>
+</body>
+</html>

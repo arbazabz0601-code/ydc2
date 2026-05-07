@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Ecommerce Website Designing Delhi India - Your Digital Crew</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://yourdigitalcrew.com/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Content wrapper with white background */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Page Main Content */
+        .page-main {
+            padding: 40px 0;
+        }
+        
+        /* ===== ECOMMERCE PAGE SPECIFIC STYLES WITH ANIMATIONS ===== */
+        
+        /* Hero Section with Animation */
+        .ecom-hero {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+            50% { background: linear-gradient(135deg, #ffffff, #fff0f0); }
+            100% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+        }
+        
+        .ecom-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(204,0,0,0.03) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .ecom-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .ecom-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            animation: slideDown 1s ease-out;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .ecom-hero h1 span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .ecom-hero h3 {
+            font-size: 28px;
+            font-weight: 500;
+            color: #cc0000;
+            margin-bottom: 25px;
+            animation: slideUp 1s ease-out 0.2s both;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .ecom-hero h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #cc0000;
+            animation: expandWidth 1.5s ease-out infinite;
+        }
+        
+        @keyframes expandWidth {
+            0% { width: 50px; opacity: 0.5; }
+            50% { width: 120px; opacity: 1; }
+            100% { width: 50px; opacity: 0.5; }
+        }
+        
+        .ecom-hero p {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.8;
+            animation: fadeIn 1.5s ease-out 0.4s both;
+        }
+        
+        /* Industries Tags with Animation */
+        .industries-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .industry-tag {
+            background: white;
+            color: #cc0000;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 2px solid #cc0000;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(204,0,0,0.1);
+            animation: float 3s ease infinite;
+        }
+        
+        .industry-tag:hover {
+            background: #cc0000;
+            color: white;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(204,0,0,0.3);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Quick Connect with Animation */
+        .quick-connect {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            margin: 40px auto;
+            border-radius: 15px;
+            max-width: 800px;
+            border-left: 5px solid #cc0000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: perspective(1000px) rotateX(0deg);
+            transition: all 0.5s;
+            animation: glow 2s infinite;
+        }
+        
+        .quick-connect:hover {
+            transform: perspective(1000px) rotateX(2deg) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(204,0,0,0.2);
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+            50% { box-shadow: 0 15px 40px rgba(204,0,0,0.15); }
+            100% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        }
+        
+        .quick-connect h3 {
+            color: #000;
+            font-size: 26px;
+            margin-bottom: 5px;
+            animation: slideInRight 1s;
+        }
+        
+        .quick-connect p {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        /* Section Title with Animation */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+            animation: fadeInScale 1s;
+        }
+        
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .section-title span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #cc0000;
+            animation: slideLine 3s ease infinite;
+        }
+        
+        @keyframes slideLine {
+            0% { width: 0; left: 0; }
+            50% { width: 100%; left: 0; }
+            100% { width: 0; left: 100%; }
+        }
+        
+        /* Problems & Solutions Grid */
+        .problems-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .problems-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, transparent, #cc0000, transparent);
+            animation: slideBorder 3s linear infinite;
+        }
+        
+        @keyframes slideBorder {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .problems-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .problem-card:nth-child(1) { animation-delay: 0.1s; }
+        .problem-card:nth-child(2) { animation-delay: 0.2s; }
+        .problem-card:nth-child(3) { animation-delay: 0.3s; }
+        .problem-card:nth-child(4) { animation-delay: 0.4s; }
+        .problem-card:nth-child(5) { animation-delay: 0.5s; }
+        
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: #cc0000;
+            transform: scaleY(0);
+            transition: transform 0.3s;
+        }
+        
+        .problem-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(204,0,0,0.15);
+        }
+        
+        .problem-card i {
+            font-size: 45px;
+            color: #cc0000;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .problem-card h4 {
+            color: #000;
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .problem-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        .solution-card {
+            background: linear-gradient(135deg, #cc0000, #990000);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            animation: slideInLeft 0.8s ease-out;
+        }
+        
+        .solution-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(204,0,0,0.3);
+        }
+        
+        .solution-card i {
+            font-size: 45px;
+            color: #ffd966;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .solution-card h4 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .solution-card p {
+            color: rgba(255,255,255,0.9);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        /* Services Grid - More From Your Digital Crew */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+        
+        .service-item {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            text-align: left;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInRight 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .service-item:nth-child(odd) { animation-delay: 0.1s; }
+        .service-item:nth-child(even) { animation-delay: 0.2s; }
+        
+        @keyframes fadeInRight {
+            0% { opacity: 0; transform: translateX(30px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        
+        .service-item::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #cc0000, #ffd966);
+            transform: scaleX(0);
+            transition: transform 0.4s;
+            transform-origin: left;
+        }
+        
+        .service-item:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(204,0,0,0.15);
+        }
+        
+        .service-item i {
+            color: #cc0000;
+            margin-right: 10px;
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+        
+        .service-item:hover i {
+            transform: rotate(360deg);
+        }
+        
+        .service-item h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        
+        .service-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        
+        /* FAQ Section with Animation */
+        .faq-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            margin: 40px 0;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.3s;
+            animation: slideUp 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .faq-item:nth-child(1) { animation-delay: 0.1s; }
+        .faq-item:nth-child(2) { animation-delay: 0.15s; }
+        .faq-item:nth-child(3) { animation-delay: 0.2s; }
+        .faq-item:nth-child(4) { animation-delay: 0.25s; }
+        .faq-item:nth-child(5) { animation-delay: 0.3s; }
+        .faq-item:nth-child(6) { animation-delay: 0.35s; }
+        .faq-item:nth-child(7) { animation-delay: 0.4s; }
+        .faq-item:nth-child(8) { animation-delay: 0.45s; }
+        .faq-item:nth-child(9) { animation-delay: 0.5s; }
+        .faq-item:nth-child(10) { animation-delay: 0.55s; }
+        
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            background: #f9f9f9;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #000;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #f0f0f0;
+            padding-left: 35px;
+        }
+        
+        .faq-question i {
+            color: #cc0000;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px 25px;
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* CTA Section with Animation */
+        .cta-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 70px 20px;
+            text-align: center;
+            margin: 50px 0 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        @keyframes pulse-bg {
+            0% { background: linear-gradient(135deg, #cc0000, #8b0000); }
+            50% { background: linear-gradient(135deg, #d00, #a00); }
+            100% { background: linear-gradient(135deg, #cc0000, #8b0000); }
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            animation: slideInLeft 1s;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            position: relative;
+            animation: slideInRight 1s;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            animation: fadeIn 1.5s;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #cc0000;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.4s;
+            border: 2px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(204,0,0,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-outline:hover {
+            background: white;
+            color: #cc0000;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .ecom-hero h1 {
+                font-size: 36px;
+            }
+            
+            .ecom-hero h3 {
+                font-size: 22px;
+            }
+            
+            .ecom-hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .quick-connect h3 {
+                font-size: 22px;
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+            
+            .cta-btn {
+                padding: 12px 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .ecom-hero h1 {
+                font-size: 28px;
+            }
+            
+            .industry-tag {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+        
+        /* Animation Classes */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Footer placeholder */
+        #footer {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content wrapper with white background -->
+    <div class="content-wrapper">
+        <!-- HEADER PLACEHOLDER - Your existing header will load here -->
+        <div id="header"></div>
+
+        <!-- ECOMMERCE PAGE MAIN CONTENT -->
+        <main class="page-main">
+            <!-- Hero Section -->
+            <div class="ecom-hero">
+                <div class="container">
+                    <h1>Ecommerce Website Designing <span>Delhi, India</span></h1>
+                    <h3>Crafted by Your Digital Crew</h3>
+                    <p>At Your Digital Crew, we create high-performance ecommerce websites that not only look stunning but also drive sales. Whether you're in Cosmetics, Medical Equipment, or Home Decor, Garments and Apparels, Jewellery Shop, Grocery Shop, Electronics Products, Furniture, Toys and Hobbies, Beauty and Personal Care, Household Appliances, Auto and Parts — our team specializes in designing tailored ecommerce solutions that give your customers a seamless shopping experience. From intuitive navigation to secure payment gateways, we build platforms that help your brand grow online.</p>
+                    <p style="margin-top: 20px;">We work across every leading ecommerce platform—Shopify, WooCommerce, Magento, OpenCart, and custom-built solutions—to match your business needs perfectly. With Your Digital Crew, you get a powerful online store designed for performance, scalability, and growth.</p>
+                    
+                    <!-- Industries Tags -->
+                    <div class="industries-tags">
+                        <span class="industry-tag">Cosmetics</span>
+                        <span class="industry-tag">Medical Equipment</span>
+                        <span class="industry-tag">Home Decor</span>
+                        <span class="industry-tag">Garments</span>
+                        <span class="industry-tag">Jewellery</span>
+                        <span class="industry-tag">Grocery</span>
+                        <span class="industry-tag">Electronics</span>
+                        <span class="industry-tag">Furniture</span>
+                        <span class="industry-tag">Toys</span>
+                        <span class="industry-tag">Beauty Care</span>
+                        <span class="industry-tag">Appliances</span>
+                        <span class="industry-tag">Auto Parts</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Connect -->
+            <div class="container">
+                <div class="quick-connect" data-aos="flip-up">
+                    <h3>Quick Connect</h3>
+                    <p>Your Digital Crew – Ecommerce Solutions That Drive Sales</p>
+                </div>
+            </div>
+
+            <!-- Why Most New Ecommerce Businesses Struggle -->
+            <div class="problems-section">
+                <div class="container">
+                    <h2 class="section-title">Why Most New <span>Ecommerce Businesses</span> Struggle – and How Your Digital Crew Helps</h2>
+                    
+                    <div class="problems-grid">
+                        <!-- Problems Column -->
+                        <div class="problem-card">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h4>Poor Website Design</h4>
+                            <p>Many online stores fail because they don't look professional or user-friendly.</p>
+                        </div>
+                        
+                        <div class="problem-card">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <h4>Slow Website Speed</h4>
+                            <p>Customers leave if a website takes too long to load.</p>
+                        </div>
+                        
+                        <div class="problem-card">
+                            <i class="fas fa-search"></i>
+                            <h4>Lack of SEO Optimization</h4>
+                            <p>Without ranking on Google, new businesses miss valuable traffic.</p>
+                        </div>
+                        
+                        <div class="problem-card">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h4>Complex Checkout Process</h4>
+                            <p>A difficult checkout makes buyers abandon carts.</p>
+                        </div>
+                        
+                        <div class="problem-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>No Trust-Building Features</h4>
+                            <p>Missing reviews, secure payments, and branding hurt conversions.</p>
+                        </div>
+                        
+                        <!-- Solutions Column -->
+                        <div class="solution-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>How Your Digital Crew Solves Them:</h4>
+                            <p>✓ We design modern, responsive ecommerce websites that impress customers.</p>
+                            <p>✓ We ensure fast-loading, mobile-friendly pages for a smooth experience.</p>
+                            <p>✓ We integrate SEO-friendly architecture to boost your Google visibility.</p>
+                            <p>✓ We simplify checkout and payment gateways for higher sales.</p>
+                            <p>✓ We add trust signals and smart features that build credibility and increase conversions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Digital Marketing Services - More From Your Digital Crew -->
+            <div class="container">
+                <h2 class="section-title">Digital Marketing Services <span>More From Your Digital Crew</span></h2>
+                
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4><i class="fas fa-code"></i> Web Development</h4>
+                        <p>We create modern, user-friendly websites with smart design and functionality, helping your business stand out online and attract more customers.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4><i class="fas fa-shopping-cart"></i> E-Commerce Website</h4>
+                        <p>We design easy-to-use, secure, and attractive e-commerce websites that boost sales, improve customer experience, and grow your online business.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4><i class="fas fa-sync-alt"></i> Dynamic Website</h4>
+                        <p>We build dynamic websites that adapt smoothly, engage visitors, deliver real-time updates, and provide a modern, interactive experience for your business.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4><i class="fas fa-database"></i> CRM Software</h4>
+                        <p>Our CRM software helps you manage customers better, track sales, improve communication, and grow lasting relationships with ease and efficiency.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4><i class="fas fa-users"></i> Social Media Management</h4>
+                        <p>We manage your social media with creative posts, engagement, and strategy to grow your brand, connect with customers, and drive results.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4><i class="fas fa-chart-line"></i> SEO Service</h4>
+                        <p>Your Digital Crew's SEO services boost your website ranking, increase traffic, improve visibility, and help your business grow online successfully.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4><i class="fas fa-map-marker-alt"></i> Local SEO Services</h4>
+                        <p>Your Digital Crew's Local SEO services help businesses appear in local searches, attract nearby customers, boost visibility, and drive more sales.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4><i class="fas fa-file-alt"></i> On Page SEO Service</h4>
+                        <p>Our On-Page SEO services optimize your website content, keywords, and structure to improve rankings, user experience, and online visibility effectively.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4><i class="fab fa-wordpress"></i> WordPress Website Design</h4>
+                        <p>Your Digital Crew designs professional WordPress websites that are fast, secure, mobile-friendly, and customized to grow your brand online effectively.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4><i class="fab fa-php"></i> PHP Web Development</h4>
+                        <p>Your Digital Crew offers PHP web development to build powerful, secure, and customized websites that enhance performance, user experience, and business growth.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4><i class="fab fa-magento"></i> Magento Web Development</h4>
+                        <p>Your Digital Crew delivers Magento web development for secure, scalable, and customized e-commerce websites that boost sales and enhance customer experience online.</p>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h4><i class="fas fa-cubes"></i> Portal Development</h4>
+                        <p>Your Digital Crew provides portal development services that create secure, user-friendly platforms to manage data, connect users, and streamline business operations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <div class="container">
+                    <h2 class="section-title">FAQs On Our <span>E commerce Website Development</span></h2>
+                    
+                    <div class="faq-container">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Why should I choose Your Digital Crew for my eCommerce website?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>At Your Digital Crew, we design eCommerce websites that combine stunning visuals with powerful functionality. From cosmetics to home décor and medical equipment, we create tailored platforms on Shopify, WooCommerce, and Magento to ensure smooth shopping and better conversions.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 2 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can Your Digital Crew build websites for every eCommerce industry?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we specialize in multiple industries, including fashion, cosmetics, medical supplies, electronics, and home décor. Our team customizes each eCommerce website to meet your brand's goals, ensuring user-friendly design, secure payments, and high performance across all devices.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 3 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Do you provide secure payment gateway integration?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely. Your Digital Crew integrates trusted and secure payment gateways like PayPal, Razorpay, and Stripe. We make sure your customers enjoy safe transactions while boosting their confidence in your brand's eCommerce store.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 4 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can you redesign my existing eCommerce website?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we offer redesign services for underperforming eCommerce websites. Our experts analyze your current design and enhance speed, user experience, and SEO optimization, transforming your site into a high-performing sales machine.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 5 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Which platforms do you use for eCommerce development?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We create eCommerce websites on leading platforms such as Shopify, WooCommerce, Magento, and custom PHP solutions. Your Digital Crew ensures your store is scalable, secure, and tailored to your unique business requirements.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 6 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Will my eCommerce website be mobile-friendly?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, every eCommerce website we design is 100% mobile-friendly. At Your Digital Crew, we ensure your store looks professional and functions seamlessly across smartphones, tablets, and desktops—boosting customer engagement and sales.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 7 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Do you also provide SEO for eCommerce websites?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely. We integrate SEO best practices while designing your store. From optimized product pages to fast loading speed, Your Digital Crew ensures your eCommerce website ranks higher in Google and attracts organic buyers.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 8 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can you help me increase online sales after website launch?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, Your Digital Crew goes beyond design. We provide digital marketing support, including SEO, Google Ads, and social media campaigns to drive traffic, improve conversions, and grow your online store's revenue.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 9 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Do you provide maintenance and support for eCommerce websites?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Of course. We offer ongoing support, including updates, bug fixes, security patches, and product management assistance. Our goal is to keep your eCommerce website running smoothly 24/7 without downtime.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 10 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How long does it take to build an eCommerce website?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>The timeline depends on your project size and features. Generally, Your Digital Crew delivers fully functional eCommerce websites within 3–6 weeks, ensuring quality design, secure checkout, and customized solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Contact CTA Section -->
+        <div class="cta-section">
+            <div class="container">
+                <h2>Ready to Launch Your Ecommerce Store?</h2>
+                <p>Get a free consultation and quote for your online business today</p>
+                <div class="cta-buttons">
+                    <a href="tel:+919212320203" class="cta-btn"><i class="fas fa-phone-alt"></i> Call Us: +91-9212320203</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fas fa-envelope"></i> Email Us</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER PLACEHOLDER - Your existing footer will load here -->
+        <div id="footer"></div>
+    </div>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Scripts -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load Header from external file
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Header file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                // Initialize dropdown stabilizer after header loads
+                setTimeout(initDropdownStabilizer, 500);
+            })
+            .catch(err => {
+                console.warn('Header file not loaded. Please ensure header.html exists.');
+                document.getElementById('header').innerHTML = `
+                    <div style="background: #000; color: white; padding: 15px; text-align: center;">
+                        Header not loaded. Please check header.html file.
+                    </div>
+                `;
+            });
+
+        // Load Footer from external file
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Footer file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(err => {
+                console.warn('Footer file not loaded. Using fallback footer.');
+                document.getElementById('footer').innerHTML = `
+                    <footer style="background: #000; color: white; text-align: center; padding: 30px; border-top: 3px solid #cc0000;">
+                        <p>© 2025 Your Digital Crew. All rights reserved.</p>
+                        <p><i class="fas fa-phone-alt"></i> +91-9212320203 | <i class="fas fa-envelope"></i> info@yourdigitalcrew.com</p>
+                    </footer>
+                `;
+            });
+
+        // Dropdown Stabilizer Function (to fix disappearing dropdown issue)
+        function initDropdownStabilizer() {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const dropdown = item.querySelector('.dropdown, .mega-menu, .dropdown-submenu-content');
+                if (!dropdown) return;
+                
+                let timeoutId;
+                
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                    dropdown.style.opacity = '1';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.transform = 'translateY(4px)';
+                });
+                
+                item.addEventListener('mouseleave', (e) => {
+                    const relatedTarget = e.relatedTarget;
+                    if (dropdown.contains(relatedTarget)) return;
+                    
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 300);
+                });
+                
+                dropdown.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                });
+                
+                dropdown.addEventListener('mouseleave', () => {
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 200);
+                });
+            });
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', function() {
+                const parent = this.closest('.faq-item');
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Sticky Header Function
+        function initStickyHeader() {
+            const headerWrapper = document.querySelector('.header-wrapper');
+            if (headerWrapper) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        headerWrapper.classList.add('scrolled');
+                    } else {
+                        headerWrapper.classList.remove('scrolled');
+                    }
+                });
+            }
+        }
+
+        window.addEventListener('load', function() {
+            initStickyHeader();
+        });
+    </script>
+</body>
+</html>

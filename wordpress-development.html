@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>WordPress Website Development Services in Delhi India - Your Digital Crew</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://yourdigitalcrew.com/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Content wrapper with white background */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Page Main Content */
+        .page-main {
+            padding: 40px 0;
+        }
+        
+        /* ===== WORDPRESS PAGE SPECIFIC STYLES WITH ANIMATIONS ===== */
+        
+        /* Hero Section with Animation */
+        .wp-hero {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+            50% { background: linear-gradient(135deg, #ffffff, #fff0f0); }
+            100% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+        }
+        
+        .wp-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(204,0,0,0.03) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .wp-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .wp-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            animation: slideDown 1s ease-out;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .wp-hero h1 span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .wp-hero h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #cc0000;
+            margin-bottom: 15px;
+            animation: slideUp 1s ease-out 0.2s both;
+        }
+        
+        .wp-hero h3 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 25px;
+            animation: slideUp 1s ease-out 0.3s both;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .wp-hero h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #cc0000;
+            animation: expandWidth 1.5s ease-out infinite;
+        }
+        
+        @keyframes expandWidth {
+            0% { width: 50px; opacity: 0.5; }
+            50% { width: 120px; opacity: 1; }
+            100% { width: 50px; opacity: 0.5; }
+        }
+        
+        .wp-hero p {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.8;
+            animation: fadeIn 1.5s ease-out 0.4s both;
+        }
+        
+        /* Quick Connect with Animation */
+        .quick-connect {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            margin: 40px auto;
+            border-radius: 15px;
+            max-width: 800px;
+            border-left: 5px solid #cc0000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: perspective(1000px) rotateX(0deg);
+            transition: all 0.5s;
+            animation: glow 2s infinite;
+        }
+        
+        .quick-connect:hover {
+            transform: perspective(1000px) rotateX(2deg) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(204,0,0,0.2);
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+            50% { box-shadow: 0 15px 40px rgba(204,0,0,0.15); }
+            100% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        }
+        
+        .quick-connect h3 {
+            color: #000;
+            font-size: 26px;
+            margin-bottom: 5px;
+            animation: slideInRight 1s;
+        }
+        
+        .quick-connect p {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        /* Section Title with Animation */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+            animation: fadeInScale 1s;
+        }
+        
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .section-title span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #cc0000;
+            animation: slideLine 3s ease infinite;
+        }
+        
+        @keyframes slideLine {
+            0% { width: 0; left: 0; }
+            50% { width: 100%; left: 0; }
+            100% { width: 0; left: 100%; }
+        }
+        
+        /* WordPress Development Agency Section */
+        .agency-section {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            margin: 30px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .agency-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, transparent, #cc0000, transparent);
+            animation: slideBorder 3s linear infinite;
+        }
+        
+        @keyframes slideBorder {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .agency-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(204,0,0,0.1);
+            max-width: 900px;
+            margin: 0 auto;
+            border: 2px solid #cc0000;
+            animation: glow 3s infinite;
+        }
+        
+        .agency-box h3 {
+            font-size: 36px;
+            color: #cc0000;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .agency-box p {
+            font-size: 20px;
+            color: #555;
+        }
+        
+        /* Why WordPress Section */
+        .why-wordpress {
+            padding: 60px 20px;
+            margin: 40px 0;
+        }
+        
+        .why-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .why-content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s;
+        }
+        
+        .why-content p:first-child {
+            animation-delay: 0.1s;
+        }
+        
+        .why-content p:last-child {
+            animation-delay: 0.2s;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.15s; }
+        .feature-card:nth-child(3) { animation-delay: 0.2s; }
+        .feature-card:nth-child(4) { animation-delay: 0.25s; }
+        .feature-card:nth-child(5) { animation-delay: 0.3s; }
+        .feature-card:nth-child(6) { animation-delay: 0.35s; }
+        
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: #cc0000;
+            transform: scaleY(0);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #cc0000;
+            box-shadow: 0 20px 40px rgba(204,0,0,0.15);
+        }
+        
+        .feature-card i {
+            font-size: 60px;
+            color: #cc0000;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .feature-card h4 {
+            color: #000;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        /* WordPress Benefits Grid */
+        .benefits-grid {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+        
+        .benefit-card {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: left;
+            border-left: 4px solid #cc0000;
+            transition: all 0.4s;
+            animation: slideInRight 0.8s ease-out;
+            animation-fill-mode: both;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .benefit-card:nth-child(1) { animation-delay: 0.1s; }
+        .benefit-card:nth-child(2) { animation-delay: 0.15s; }
+        .benefit-card:nth-child(3) { animation-delay: 0.2s; }
+        .benefit-card:nth-child(4) { animation-delay: 0.25s; }
+        .benefit-card:nth-child(5) { animation-delay: 0.3s; }
+        .benefit-card:nth-child(6) { animation-delay: 0.35s; }
+        
+        .benefit-card:hover {
+            transform: translateX(10px) translateY(-5px);
+            box-shadow: 0 15px 30px rgba(204,0,0,0.15);
+        }
+        
+        .benefit-card i {
+            color: #cc0000;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-card h4 {
+            color: #000;
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .benefit-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* CTA Section with Animation */
+        .cta-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 70px 20px;
+            text-align: center;
+            margin: 50px 0 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        @keyframes pulse-bg {
+            0% { background: linear-gradient(135deg, #cc0000, #8b0000); }
+            50% { background: linear-gradient(135deg, #d00, #a00); }
+            100% { background: linear-gradient(135deg, #cc0000, #8b0000); }
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            animation: slideInLeft 1s;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            position: relative;
+            animation: slideInRight 1s;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            animation: fadeIn 1.5s;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #cc0000;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.4s;
+            border: 2px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(204,0,0,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-outline:hover {
+            background: white;
+            color: #cc0000;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .wp-hero h1 {
+                font-size: 36px;
+            }
+            
+            .wp-hero h2 {
+                font-size: 28px;
+            }
+            
+            .wp-hero h3 {
+                font-size: 20px;
+            }
+            
+            .wp-hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .quick-connect h3 {
+                font-size: 22px;
+            }
+            
+            .agency-box h3 {
+                font-size: 28px;
+            }
+            
+            .agency-box p {
+                font-size: 18px;
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+            
+            .cta-btn {
+                padding: 12px 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .wp-hero h1 {
+                font-size: 28px;
+            }
+            
+            .features-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .agency-box {
+                padding: 30px 20px;
+            }
+        }
+        
+        /* Animation Classes */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Footer placeholder */
+        #footer {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content wrapper with white background -->
+    <div class="content-wrapper">
+        <!-- HEADER PLACEHOLDER - Your existing header will load here -->
+        <div id="header"></div>
+
+        <!-- WORDPRESS PAGE MAIN CONTENT -->
+        <main class="page-main">
+            <!-- Hero Section -->
+            <div class="wp-hero">
+                <div class="container">
+                    <h1>WordPress Website Development Services in Delhi India</h1>
+                    <h2>Professional WordPress Website Development Services</h2>
+                    <p>If you are looking for a professional digital agency in Delhi NCR to grow your business online, Your Digital Crew is the best option. We specialize in custom WordPress development, delivering high-performance websites that are SEO-friendly, mobile-responsive, and tailored to your brand.</p>
+                    <p style="margin-top: 20px;">Our team has expertise in building eCommerce websites, corporate sites, portfolio websites, and blogs on WordPress, ensuring a smooth user experience and secure functionality. Whether you are in Delhi, Noida, Gurgaon, or anywhere in India, we create solutions that help your business stand out.</p>
+                    <p style="margin-top: 20px;">With custom themes, plugins, API integration, and SEO optimization, we make sure your website is not just attractive but also ranks higher on search engines. Partner with Your Digital Crew, the most trusted WordPress development company in Delhi NCR, and take your business to the next level.</p>
+                </div>
+            </div>
+
+            <!-- Quick Connect -->
+            <div class="container">
+                <div class="quick-connect" data-aos="flip-up">
+                    <h3>Quick Connect</h3>
+                    <p>Your Digital Crew – Trusted WordPress Development Agency in India</p>
+                </div>
+            </div>
+
+            <!-- WordPress Development Agency Section -->
+            <div class="agency-section">
+                <div class="container">
+                    <div class="agency-box">
+                        <h3>WordPress Development Agency in India</h3>
+                        <p>Your Digital Crew – Expert WordPress Developers in Delhi NCR</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WordPress Web Design in Delhi – The Right Time is Now -->
+            <div class="why-wordpress">
+                <div class="container">
+                    <h2 class="section-title">WordPress Web Design in Delhi – <span>The Right Time is Now</span></h2>
+                    
+                    <div class="why-content">
+                        <p>If you've been delaying building or redesigning your website, now is the time to act. In a competitive market like Delhi, every business—whether small or large—needs a digital presence that stands out. Customers won't wait. If they don't find you online, they will find your competitors.</p>
+                        <p>At Your Digital Crew, we're here to make sure that doesn't happen. Our WordPress design services are crafted to give your business the professional edge it deserves.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why WordPress is the Perfect Choice -->
+            <div class="container">
+                <h2 class="section-title">Why WordPress is the <span>Perfect Choice</span> for Your Website</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h4>User-Friendly</h4>
+                        <p>WordPress is designed in a way that even non-technical people can manage it. Adding new content, images, or products is simple and quick.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-search"></i>
+                        <h4>SEO-Friendly</h4>
+                        <p>Google loves WordPress. With the right plugins and optimization, your website can rank higher and attract the right audience.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>Customizable</h4>
+                        <p>Whether you are a startup, a growing business, or a large enterprise, WordPress offers endless design possibilities that can match your vision.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-rupee-sign"></i>
+                        <h4>Cost-Effective</h4>
+                        <p>Unlike building a website from scratch, WordPress is budget-friendly yet powerful, saving you time and money.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Secure & Scalable</h4>
+                        <p>With regular updates and security plugins, your website stays safe and grows with your business.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>High Performance</h4>
+                        <p>WordPress websites are optimized for speed and performance, ensuring your visitors have a smooth experience.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WordPress Benefits Grid -->
+            <div class="container">
+                <h2 class="section-title">Why Choose <span>Your Digital Crew</span> for WordPress Development?</h2>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-code"></i>
+                        <h4>Custom Theme Development</h4>
+                        <p>We build custom WordPress themes tailored to your brand identity, not just templates.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-plug"></i>
+                        <h4>Plugin Integration</h4>
+                        <p>Custom plugin development and integration for enhanced functionality.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Responsive Design</h4>
+                        <p>100% mobile-responsive websites that look perfect on all devices.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h4>WooCommerce Experts</h4>
+                        <p>Powerful eCommerce stores with WooCommerce for selling online.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>Speed Optimization</h4>
+                        <p>Fast-loading websites optimized for Core Web Vitals and performance.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-headset"></i>
+                        <h4>24/7 Support</h4>
+                        <p>Ongoing maintenance and support to keep your website running smoothly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Note -->
+            <div class="container">
+                <div class="quick-connect" style="background: linear-gradient(135deg, #f8f9fa, #ffffff); border-left: 5px solid #cc0000; padding: 30px;">
+                    <p style="font-size: 18px; line-height: 1.8;">At Your Digital Crew, we specialize in using WordPress to design websites that not only look stunning but also deliver real business results.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Contact CTA Section -->
+        <div class="cta-section">
+            <div class="container">
+                <h2>Ready to Build Your WordPress Website?</h2>
+                <p>Get a free consultation and quote for your business website today</p>
+                <div class="cta-buttons">
+                    <a href="tel:+919212320203" class="cta-btn"><i class="fas fa-phone-alt"></i> Call Us: +91-9212320203</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fas fa-envelope"></i> Email Us</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER PLACEHOLDER - Your existing footer will load here -->
+        <div id="footer"></div>
+    </div>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Scripts -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load Header from external file
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Header file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                // Initialize dropdown stabilizer after header loads
+                setTimeout(initDropdownStabilizer, 500);
+            })
+            .catch(err => {
+                console.warn('Header file not loaded. Please ensure header.html exists.');
+                document.getElementById('header').innerHTML = `
+                    <div style="background: #000; color: white; padding: 15px; text-align: center;">
+                        Header not loaded. Please check header.html file.
+                    </div>
+                `;
+            });
+
+        // Load Footer from external file
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Footer file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(err => {
+                console.warn('Footer file not loaded. Using fallback footer.');
+                document.getElementById('footer').innerHTML = `
+                    <footer style="background: #000; color: white; text-align: center; padding: 30px; border-top: 3px solid #cc0000;">
+                        <p>© 2025 Your Digital Crew. All rights reserved.</p>
+                        <p><i class="fas fa-phone-alt"></i> +91-9212320203 | <i class="fas fa-envelope"></i> info@yourdigitalcrew.com</p>
+                    </footer>
+                `;
+            });
+
+        // Dropdown Stabilizer Function
+        function initDropdownStabilizer() {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const dropdown = item.querySelector('.dropdown, .mega-menu, .dropdown-submenu-content');
+                if (!dropdown) return;
+                
+                let timeoutId;
+                
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                    dropdown.style.opacity = '1';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.transform = 'translateY(4px)';
+                });
+                
+                item.addEventListener('mouseleave', (e) => {
+                    const relatedTarget = e.relatedTarget;
+                    if (dropdown.contains(relatedTarget)) return;
+                    
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 300);
+                });
+                
+                dropdown.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                });
+                
+                dropdown.addEventListener('mouseleave', () => {
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 200);
+                });
+            });
+        }
+
+        // Sticky Header Function
+        function initStickyHeader() {
+            const headerWrapper = document.querySelector('.header-wrapper');
+            if (headerWrapper) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        headerWrapper.classList.add('scrolled');
+                    } else {
+                        headerWrapper.classList.remove('scrolled');
+                    }
+                });
+            }
+        }
+
+        // Call sticky header after page loads
+        window.addEventListener('load', function() {
+            initStickyHeader();
+        });
+    </script>
+</body>
+</html>

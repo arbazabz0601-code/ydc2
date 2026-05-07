@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Local Business Listing Service in Delhi India - Your Digital Crew</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://yourdigitalcrew.com/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Content wrapper with white background */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Page Main Content */
+        .page-main {
+            padding: 40px 0;
+        }
+        
+        /* ===== LOCAL BUSINESS LISTING PAGE SPECIFIC STYLES WITH ANIMATIONS ===== */
+        
+        /* Hero Section with Animation */
+        .listing-hero {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+            50% { background: linear-gradient(135deg, #ffffff, #fff0f0); }
+            100% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+        }
+        
+        .listing-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(204,0,0,0.03) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .listing-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .listing-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            animation: slideDown 1s ease-out;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .listing-hero h1 span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .listing-hero h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #cc0000;
+            margin-bottom: 20px;
+            animation: slideUp 1s ease-out 0.2s both;
+        }
+        
+        .listing-hero h3 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 20px;
+            animation: slideUp 1s ease-out 0.25s both;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .listing-hero h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #cc0000;
+            animation: expandWidth 1.5s ease-out infinite;
+        }
+        
+        @keyframes expandWidth {
+            0% { width: 50px; opacity: 0.5; }
+            50% { width: 120px; opacity: 1; }
+            100% { width: 50px; opacity: 0.5; }
+        }
+        
+        .listing-hero p {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.8;
+            animation: fadeIn 1.5s ease-out 0.3s both;
+        }
+        
+        /* Quick Connect with Animation */
+        .quick-connect {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            margin: 40px auto;
+            border-radius: 15px;
+            max-width: 800px;
+            border-left: 5px solid #cc0000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: perspective(1000px) rotateX(0deg);
+            transition: all 0.5s;
+            animation: glow 2s infinite;
+        }
+        
+        .quick-connect:hover {
+            transform: perspective(1000px) rotateX(2deg) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(204,0,0,0.2);
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+            50% { box-shadow: 0 15px 40px rgba(204,0,0,0.15); }
+            100% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        }
+        
+        .quick-connect h3 {
+            color: #000;
+            font-size: 26px;
+            margin-bottom: 5px;
+            animation: slideInRight 1s;
+        }
+        
+        .quick-connect p {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        /* Section Title with Animation */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+            animation: fadeInScale 1s;
+        }
+        
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .section-title span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #cc0000;
+            animation: slideLine 3s ease infinite;
+        }
+        
+        @keyframes slideLine {
+            0% { width: 0; left: 0; }
+            50% { width: 100%; left: 0; }
+            100% { width: 0; left: 100%; }
+        }
+        
+        /* Intro Box */
+        .intro-box {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            border: 2px solid #cc0000;
+            box-shadow: 0 15px 40px rgba(204,0,0,0.1);
+            animation: glow 3s infinite;
+        }
+        
+        .intro-box p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        /* GMB Section */
+        .gmb-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gmb-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, transparent, #cc0000, transparent);
+            animation: slideBorder 3s linear infinite;
+        }
+        
+        @keyframes slideBorder {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .gmb-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .gmb-content h3 {
+            font-size: 32px;
+            color: #cc0000;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .gmb-content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .benefit-card:nth-child(1) { animation-delay: 0.1s; }
+        .benefit-card:nth-child(2) { animation-delay: 0.15s; }
+        .benefit-card:nth-child(3) { animation-delay: 0.2s; }
+        .benefit-card:nth-child(4) { animation-delay: 0.25s; }
+        .benefit-card:nth-child(5) { animation-delay: 0.3s; }
+        
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: #cc0000;
+            transform: scaleY(0);
+            transition: transform 0.3s;
+        }
+        
+        .benefit-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #cc0000;
+            box-shadow: 0 20px 40px rgba(204,0,0,0.15);
+        }
+        
+        .benefit-card i {
+            font-size: 45px;
+            color: #cc0000;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .benefit-card h4 {
+            color: #000;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .benefit-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        /* Why Choose Grid */
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .why-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            animation: slideInLeft 0.8s ease-out;
+            animation-fill-mode: both;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .why-item:nth-child(1) { animation-delay: 0.1s; }
+        .why-item:nth-child(2) { animation-delay: 0.15s; }
+        .why-item:nth-child(3) { animation-delay: 0.2s; }
+        .why-item:nth-child(4) { animation-delay: 0.25s; }
+        .why-item:nth-child(5) { animation-delay: 0.3s; }
+        .why-item:nth-child(6) { animation-delay: 0.35s; }
+        
+        .why-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: #cc0000;
+            box-shadow: 0 15px 30px rgba(204,0,0,0.15);
+        }
+        
+        .why-item i {
+            font-size: 40px;
+            color: #cc0000;
+            margin-bottom: 15px;
+        }
+        
+        .why-item h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        
+        .why-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            margin: 40px 0;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.3s;
+            animation: slideUp 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .faq-item:nth-child(1) { animation-delay: 0.1s; }
+        .faq-item:nth-child(2) { animation-delay: 0.15s; }
+        .faq-item:nth-child(3) { animation-delay: 0.2s; }
+        .faq-item:nth-child(4) { animation-delay: 0.25s; }
+        .faq-item:nth-child(5) { animation-delay: 0.3s; }
+        .faq-item:nth-child(6) { animation-delay: 0.35s; }
+        .faq-item:nth-child(7) { animation-delay: 0.4s; }
+        .faq-item:nth-child(8) { animation-delay: 0.45s; }
+        .faq-item:nth-child(9) { animation-delay: 0.5s; }
+        
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            background: #f9f9f9;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #000;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #f0f0f0;
+            padding-left: 35px;
+        }
+        
+        .faq-question i {
+            color: #cc0000;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px 25px;
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* Talk With Us Section */
+        .talk-section {
+            background: linear-gradient(135deg, #cc0000, #990000);
+            padding: 60px 20px;
+            margin: 40px 0;
+            text-align: center;
+            color: white;
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        .talk-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .talk-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .talk-content h3 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .talk-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .talk-btn {
+            display: inline-block;
+            background: white;
+            color: #cc0000;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.4s;
+            border: 2px solid white;
+        }
+        
+        .talk-btn:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 70px 20px;
+            text-align: center;
+            margin: 50px 0 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            animation: slideInLeft 1s;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            position: relative;
+            animation: slideInRight 1s;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            animation: fadeIn 1.5s;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #cc0000;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.4s;
+            border: 2px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(204,0,0,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-outline:hover {
+            background: white;
+            color: #cc0000;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .listing-hero h1 {
+                font-size: 36px;
+            }
+            
+            .listing-hero h2 {
+                font-size: 24px;
+            }
+            
+            .listing-hero h3 {
+                font-size: 20px;
+            }
+            
+            .listing-hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .quick-connect h3 {
+                font-size: 22px;
+            }
+            
+            .gmb-content h3 {
+                font-size: 28px;
+            }
+            
+            .talk-content h3 {
+                font-size: 28px;
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+            
+            .cta-btn {
+                padding: 12px 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .listing-hero h1 {
+                font-size: 28px;
+            }
+            
+            .intro-box {
+                padding: 30px 20px;
+            }
+        }
+        
+        /* Animation Classes */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Footer placeholder */
+        #footer {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content wrapper with white background -->
+    <div class="content-wrapper">
+        <!-- HEADER PLACEHOLDER - Your existing header will load here -->
+        <div id="header"></div>
+
+        <!-- LOCAL BUSINESS LISTING PAGE MAIN CONTENT -->
+        <main class="page-main">
+            <!-- Hero Section -->
+            <div class="listing-hero">
+                <div class="container">
+                    <h1>Local Business Listing Service in Delhi India</h1>
+                    <h2>Local Business Listing Services in Delhi, India – Your Digital Crew</h2>
+                    <h3>local business listing</h3>
+                    <p>In today's digital-first world, local visibility can make or break your business. If your brand is missing from local search results, you're automatically losing potential customers every single day. That's where Your Digital Crew steps in with expert Local Business Listing Services in Delhi, India, tailored to put your business in front of the right audience at the right time.</p>
+                    <p style="margin-top: 20px;">Local business listing means publishing your accurate business details — such as name, address, phone number, website, and services — on trusted online directories and platforms like Google Business Profile (Google My Business) and other aggregator platforms. This is a vital part of local SEO that strengthens your online presence in your service area.</p>
+                    <p style="margin-top: 20px;">At Your Digital Crew, we focus on creating and managing powerful business listings with fresh, original, and SEO-friendly content — ensuring your brand gets maximum visibility, credibility, and customer trust.</p>
+                </div>
+            </div>
+
+            <!-- Quick Connect -->
+            <div class="container">
+                <div class="quick-connect" data-aos="flip-up">
+                    <h3>Quick Connect</h3>
+                    <p>Your Digital Crew – Expert Local Business Listing Services</p>
+                </div>
+            </div>
+
+            <!-- Google My Business Section -->
+            <div class="gmb-section">
+                <div class="container">
+                    <div class="gmb-content">
+                        <h3>Google My Business (GMB) – The Digital Identity of Your Business</h3>
+                        <p>In today's digital era, almost everyone owns a smartphone and has the internet at their fingertips. Whether someone wants to find a restaurant, locate a nearby clinic, or search for a shopping store — the first step is always a Google search. If your business isn't listed on Google My Business (GMB), you're losing dozens of potential customers every single day.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits of Google My Business -->
+            <div class="container">
+                <h2 class="section-title">Benefits of <span>Google My Business</span> for Your Business</h2>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-eye"></i>
+                        <h4>Increased Local Search Visibility</h4>
+                        <p>Your business can appear at the top of Google Search and Google Maps results.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Direct Customer Engagement</h4>
+                        <p>Customers can directly call you or get directions to your business.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-star"></i>
+                        <h4>Trust Building</h4>
+                        <p>Customer reviews and ratings help strengthen your brand reputation.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-rupee-sign"></i>
+                        <h4>Free Promotion</h4>
+                        <p>GMB is a completely free tool that works for small, medium, and large businesses alike.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-microphone"></i>
+                        <h4>Voice Search Optimization</h4>
+                        <p>With voice search growing rapidly, GMB ensures your business shows up in such queries too.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Your Digital Crew -->
+            <div class="container">
+                <h2 class="section-title">Why Choose <span>Your Digital Crew</span></h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; font-size: 18px; color: #555;">We don't just create your Google My Business profile; we optimize and manage it for long-term success. Our team ensures:</p>
+                
+                <div class="why-choose-grid">
+                    <div class="why-item">
+                        <i class="fas fa-pen-fancy"></i>
+                        <h4>Fresh, Unique Content</h4>
+                        <p>Fresh, unique, and SEO-friendly content for your profile.</p>
+                    </div>
+                    
+                    <div class="why-item">
+                        <i class="fas fa-tags"></i>
+                        <h4>Accurate Categories</h4>
+                        <p>Accurate categories and targeted keywords for better visibility.</p>
+                    </div>
+                    
+                    <div class="why-item">
+                        <i class="fas fa-camera"></i>
+                        <h4>High-Quality Images</h4>
+                        <p>High-quality images and engaging posts to attract customers.</p>
+                    </div>
+                    
+                    <div class="why-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <h4>Regular Updates</h4>
+                        <p>Regular updates with offers, products, and services.</p>
+                    </div>
+                    
+                    <div class="why-item">
+                        <i class="fas fa-star-half-alt"></i>
+                        <h4>Review Management</h4>
+                        <p>Effective review and rating management to build trust.</p>
+                    </div>
+                    
+                    <div class="why-item">
+                        <i class="fas fa-users"></i>
+                        <h4>Local Customer Attraction</h4>
+                        <p>This helps your business attract more local customers consistently.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <div class="container">
+                    <h2 class="section-title">FAQs On Our <span>Local Business Listing</span> Services</h2>
+                    
+                    <div class="faq-container">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Why do I need a Google My Business (GMB) profile for my business?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>A GMB profile helps your business appear in Google Search, Maps, and local searches. It increases visibility, builds trust, and attracts more local customers.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 2 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can Your Digital Crew create and manage my GMB profile?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we offer complete GMB creation and management services including optimization, regular updates, post creation, and review management to ensure your profile performs at its best.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 3 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How does a GMB profile help me get more customers?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>When local customers search for products or services you offer, your GMB profile appears in search results and maps. This makes it easy for them to find, contact, and visit your business.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 4 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can GMB improve my ranking on Google?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, a properly optimized GMB profile is a key factor in local SEO and helps improve your visibility in local search results, making it easier for customers to find you.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 5 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How long does it take to see results from GMB optimization?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Results can vary, but many businesses see improved visibility and customer engagement within 2-4 weeks of proper GMB optimization and management.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 6 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>What kind of businesses should use Google My Business?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Any business with a physical location or that serves a local area should use GMB — including retail stores, restaurants, clinics, service providers, and professional offices.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 7 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Does Your Digital Crew provide regular updates for my GMB?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we regularly update your GMB profile with fresh content, offers, events, product updates, and service information to keep your audience engaged.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 8 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can Your Digital Crew also help me with reviews and ratings?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! We help manage customer reviews, respond to feedback, and implement strategies to encourage positive reviews while addressing concerns professionally.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 9 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Why should I choose Your Digital Crew over others?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Your Digital Crew combines local SEO expertise with personalized service. We don't just list your business — we create a complete local presence strategy that drives real results and measurable growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Talk With Us Section -->
+            <div class="container">
+                <div class="talk-section">
+                    <div class="talk-content">
+                        <h3>Talk With Us</h3>
+                        <p>Send us a message today and we will contact you as soon as possible.</p>
+                        <a href="#" class="talk-btn"><i class="fas fa-paper-plane"></i> Send Message</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Contact CTA Section -->
+        <div class="cta-section">
+            <div class="container">
+                <h2>Ready to Boost Your Local Visibility?</h2>
+                <p>Get a free consultation and audit for your local business listing today</p>
+                <div class="cta-buttons">
+                    <a href="tel:+919212320203" class="cta-btn"><i class="fas fa-phone-alt"></i> Call Us: +91-9212320203</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fas fa-envelope"></i> Email Us</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER PLACEHOLDER - Your existing footer will load here -->
+        <div id="footer"></div>
+    </div>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Scripts -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load Header from external file
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Header file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                // Initialize dropdown stabilizer after header loads
+                setTimeout(initDropdownStabilizer, 500);
+            })
+            .catch(err => {
+                console.warn('Header file not loaded. Please ensure header.html exists.');
+                document.getElementById('header').innerHTML = `
+                    <div style="background: #000; color: white; padding: 15px; text-align: center;">
+                        Header not loaded. Please check header.html file.
+                    </div>
+                `;
+            });
+
+        // Load Footer from external file
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Footer file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(err => {
+                console.warn('Footer file not loaded. Using fallback footer.');
+                document.getElementById('footer').innerHTML = `
+                    <footer style="background: #000; color: white; text-align: center; padding: 30px; border-top: 3px solid #cc0000;">
+                        <p>© 2025 Your Digital Crew. All rights reserved.</p>
+                        <p><i class="fas fa-phone-alt"></i> +91-9212320203 | <i class="fas fa-envelope"></i> info@yourdigitalcrew.com</p>
+                    </footer>
+                `;
+            });
+
+        // Dropdown Stabilizer Function
+        function initDropdownStabilizer() {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const dropdown = item.querySelector('.dropdown, .mega-menu, .dropdown-submenu-content');
+                if (!dropdown) return;
+                
+                let timeoutId;
+                
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                    dropdown.style.opacity = '1';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.transform = 'translateY(4px)';
+                });
+                
+                item.addEventListener('mouseleave', (e) => {
+                    const relatedTarget = e.relatedTarget;
+                    if (dropdown.contains(relatedTarget)) return;
+                    
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 300);
+                });
+                
+                dropdown.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                });
+                
+                dropdown.addEventListener('mouseleave', () => {
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 200);
+                });
+            });
+        }
+
+        // Sticky Header Function
+        function initStickyHeader() {
+            const headerWrapper = document.querySelector('.header-wrapper');
+            if (headerWrapper) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        headerWrapper.classList.add('scrolled');
+                    } else {
+                        headerWrapper.classList.remove('scrolled');
+                    }
+                });
+            }
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', function() {
+                const parent = this.closest('.faq-item');
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Call sticky header after page loads
+        window.addEventListener('load', function() {
+            initStickyHeader();
+        });
+    </script>
+</body>
+</html>

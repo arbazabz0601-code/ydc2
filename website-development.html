@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Web Design & Development Agency in Delhi India - Your Digital Crew</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://yourdigitalcrew.com/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Content wrapper with white background */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Page Main Content */
+        .page-main {
+            padding: 40px 0;
+        }
+        
+        /* ===== AGENCY PAGE SPECIFIC STYLES WITH ANIMATIONS ===== */
+        
+        /* Hero Section with Animation */
+        .agency-hero {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+            50% { background: linear-gradient(135deg, #ffffff, #fff0f0); }
+            100% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+        }
+        
+        .agency-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(204,0,0,0.03) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .agency-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .agency-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            animation: slideDown 1s ease-out;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .agency-hero h1 span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .agency-hero h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #cc0000;
+            margin-bottom: 20px;
+            animation: slideUp 1s ease-out 0.2s both;
+        }
+        
+        .agency-hero h3 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 25px;
+            animation: slideUp 1s ease-out 0.3s both;
+        }
+        
+        .agency-hero p {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.8;
+            animation: fadeIn 1.5s ease-out 0.4s both;
+        }
+        
+        /* Quick Connect with Animation */
+        .quick-connect {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            margin: 40px auto;
+            border-radius: 15px;
+            max-width: 800px;
+            border-left: 5px solid #cc0000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: perspective(1000px) rotateX(0deg);
+            transition: all 0.5s;
+            animation: glow 2s infinite;
+        }
+        
+        .quick-connect:hover {
+            transform: perspective(1000px) rotateX(2deg) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(204,0,0,0.2);
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+            50% { box-shadow: 0 15px 40px rgba(204,0,0,0.15); }
+            100% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        }
+        
+        .quick-connect h3 {
+            color: #000;
+            font-size: 26px;
+            margin-bottom: 5px;
+            animation: slideInRight 1s;
+        }
+        
+        .quick-connect p {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        /* Callout Box */
+        .callout-box {
+            background: linear-gradient(135deg, #cc0000, #990000);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin: 40px auto;
+            border-radius: 15px;
+            max-width: 900px;
+            animation: pulse-bg 3s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .callout-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .callout-box h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .callout-box p {
+            font-size: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Section Title with Animation */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+            animation: fadeInScale 1s;
+        }
+        
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .section-title span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #cc0000;
+            animation: slideLine 3s ease infinite;
+        }
+        
+        @keyframes slideLine {
+            0% { width: 0; left: 0; }
+            50% { width: 100%; left: 0; }
+            100% { width: 0; left: 100%; }
+        }
+        
+        /* Why Section */
+        .why-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .why-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, transparent, #cc0000, transparent);
+            animation: slideBorder 3s linear infinite;
+        }
+        
+        @keyframes slideBorder {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .why-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeInUp 1s;
+        }
+        
+        .why-content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .stat-item:nth-child(1) { animation-delay: 0.1s; }
+        .stat-item:nth-child(2) { animation-delay: 0.2s; }
+        
+        .stat-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #cc0000;
+            box-shadow: 0 20px 40px rgba(204,0,0,0.15);
+        }
+        
+        .stat-item h4 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #cc0000;
+            margin-bottom: 10px;
+            animation: countUp 2s ease-out;
+        }
+        
+        .stat-item p {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        /* Packages Section */
+        .packages-section {
+            padding: 60px 0;
+        }
+        
+        .packages-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        
+        .package-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+            transition: all 0.4s;
+            position: relative;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .package-card:nth-child(1) { animation-delay: 0.1s; }
+        .package-card:nth-child(2) { animation-delay: 0.2s; }
+        .package-card:nth-child(3) { animation-delay: 0.3s; }
+        
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .package-card:hover {
+            border-color: #cc0000;
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(204,0,0,0.2);
+        }
+        
+        .package-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #cc0000;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 2;
+            animation: pulse 2s infinite;
+        }
+        
+        .package-header {
+            background: linear-gradient(135deg, #000, #1a1a1a);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .package-header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .package-header h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .package-header p {
+            font-size: 14px;
+            color: #ffd966;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .package-price {
+            background: linear-gradient(45deg, #cc0000, #990000);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .package-price::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            animation: rotate 15s linear infinite;
+        }
+        
+        .package-price .price {
+            font-size: 36px;
+            font-weight: 800;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .package-price small {
+            font-size: 14px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .package-price .old-price {
+            font-size: 18px;
+            color: rgba(255,255,255,0.6);
+            text-decoration: line-through;
+            margin-left: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .package-content {
+            padding: 30px 20px;
+        }
+        
+        .package-content p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.7;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .package-content i {
+            color: #cc0000;
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+        
+        .package-content p:hover i {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        .package-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #cc0000, #990000);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.4s;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .package-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .package-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .package-btn:hover {
+            background: transparent;
+            color: #cc0000;
+            border-color: #cc0000;
+            transform: scale(1.05);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            margin: 40px 0;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.3s;
+            animation: slideUp 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .faq-item:nth-child(1) { animation-delay: 0.1s; }
+        .faq-item:nth-child(2) { animation-delay: 0.15s; }
+        .faq-item:nth-child(3) { animation-delay: 0.2s; }
+        .faq-item:nth-child(4) { animation-delay: 0.25s; }
+        .faq-item:nth-child(5) { animation-delay: 0.3s; }
+        .faq-item:nth-child(6) { animation-delay: 0.35s; }
+        .faq-item:nth-child(7) { animation-delay: 0.4s; }
+        .faq-item:nth-child(8) { animation-delay: 0.45s; }
+        .faq-item:nth-child(9) { animation-delay: 0.5s; }
+        .faq-item:nth-child(10) { animation-delay: 0.55s; }
+        
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            background: #f9f9f9;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #000;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #f0f0f0;
+            padding-left: 35px;
+        }
+        
+        .faq-question i {
+            color: #cc0000;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px 25px;
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* CTA Section with Animation */
+        .cta-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 70px 20px;
+            text-align: center;
+            margin: 50px 0 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        @keyframes pulse-bg {
+            0% { background: linear-gradient(135deg, #cc0000, #8b0000); }
+            50% { background: linear-gradient(135deg, #d00, #a00); }
+            100% { background: linear-gradient(135deg, #cc0000, #8b0000); }
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            animation: slideInLeft 1s;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            position: relative;
+            animation: slideInRight 1s;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            animation: fadeIn 1.5s;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #cc0000;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.4s;
+            border: 2px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(204,0,0,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-outline:hover {
+            background: white;
+            color: #cc0000;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .agency-hero h1 {
+                font-size: 36px;
+            }
+            
+            .agency-hero h2 {
+                font-size: 28px;
+            }
+            
+            .agency-hero h3 {
+                font-size: 20px;
+            }
+            
+            .agency-hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .quick-connect h3 {
+                font-size: 22px;
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+            
+            .cta-btn {
+                padding: 12px 30px;
+            }
+            
+            .package-header h3 {
+                font-size: 24px;
+            }
+            
+            .package-price .price {
+                font-size: 28px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .agency-hero h1 {
+                font-size: 28px;
+            }
+            
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .callout-box h3 {
+                font-size: 22px;
+            }
+            
+            .callout-box p {
+                font-size: 16px;
+            }
+        }
+        
+        /* Animation Classes */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Footer placeholder */
+        #footer {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content wrapper with white background -->
+    <div class="content-wrapper">
+        <!-- HEADER PLACEHOLDER - Your existing header will load here -->
+        <div id="header"></div>
+
+        <!-- AGENCY PAGE MAIN CONTENT -->
+        <main class="page-main">
+            <!-- Hero Section -->
+            <div class="agency-hero">
+                <div class="container">
+                    <h1>Web Design & Development Agency in Delhi India</h1>
+                    <h2>We Don't Just Build Websites, We Build Experiences</h2>
+                    <h3>website development company</h3>
+                    <p>Your Digital Crew is a trusted Digital Marketing Agency in Delhi NCR, dedicated to helping businesses build a strong online presence. We specialize in affordable website development services that are not only professional but also SEO-friendly and mobile responsive. Our team designs websites that look attractive, perform seamlessly, and deliver real results.</p>
+                    <p style="margin-top: 20px;">We believe that every business deserves a modern, user-friendly website without spending a fortune. That's why we focus on creating cost-effective web solutions tailored to your goals. Whether you need a brand-new website, a redesign, or complete digital marketing support, Your Digital Crew is your one-stop partner.</p>
+                </div>
+            </div>
+
+            <!-- Quick Connect -->
+            <div class="container">
+                <div class="quick-connect" data-aos="flip-up">
+                    <h3>Quick Connect</h3>
+                    <p>Your Digital Crew – We Don't Just Build Websites, We Build Experiences</p>
+                </div>
+            </div>
+
+            <!-- Callout Box -->
+            <div class="container">
+                <div class="callout-box">
+                    <h3>Get Your Business Online with India's #1 Website Development Team—Start Today</h3>
+                    <p>71% of Small Businesses Already Have a Website—Don't Let Yours Fall Behind.</p>
+                </div>
+            </div>
+
+            <!-- Why Every Business Needs a Website -->
+            <div class="why-section">
+                <div class="container">
+                    <h2 class="section-title">Why Every Business in <span>India Needs</span> a Website Today</h2>
+                    
+                    <div class="why-content">
+                        <p>Did you know that 72% of small businesses worldwide already have a website, while in India the number is 62%? This clearly shows how fast businesses are moving online to attract customers and expand globally. If your business still doesn't have a website, you're losing valuable opportunities every single day.</p>
+                        <p>A professional, SEO-friendly, and mobile-responsive website helps build trust, showcase your products or services, and connect with customers 24/7. It also ensures that your business is not just visible locally but can reach audiences across the world.</p>
+                        <p>That's where Your Digital Crew comes in. As a trusted digital marketing agency in Delhi NCR, we understand your business needs and create affordable, responsive websites designed for growth. With our expertise in SEO and online promotion, we ensure your website ranks higher, attracts maximum visitors, and turns them into paying customers.</p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <h4>72%</h4>
+                                <p>Small Businesses Worldwide Have Websites</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>62%</h4>
+                                <p>Small Businesses in India Have Websites</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Website Development Portfolio -->
+            <div class="container">
+                <h2 class="section-title">Our Website <span>Development Portfolio</span></h2>
+            </div>
+
+            <!-- Smart Website Plans -->
+            <div class="packages-section">
+                <div class="container">
+                    <h2 class="section-title">Smart Website Plans for <span>Every Business</span></h2>
+                    
+                    <div class="packages-grid">
+                        <!-- Startup Package -->
+                        <div class="package-card">
+                            <div class="package-header">
+                                <h3>STARTUP WEBSITE</h3>
+                                <p>Best for Small Business. Smart Websites for New Startups</p>
+                            </div>
+                            <div class="package-price">
+                                <span class="price">₹15,000 <small>INR</small></span>
+                                <span class="old-price">$200 USD</span>
+                            </div>
+                            <div class="package-content">
+                                <p><i class="fas fa-check"></i> Perfect for new businesses and startups</p>
+                                <p><i class="fas fa-check"></i> 5-10 dynamic pages</p>
+                                <p><i class="fas fa-check"></i> Mobile responsive design</p>
+                                <p><i class="fas fa-check"></i> Basic SEO setup</p>
+                                <p><i class="fas fa-check"></i> Contact form integration</p>
+                                <div style="text-align: center; margin-top: 25px;">
+                                    <a href="#" class="package-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Small Business Package -->
+                        <div class="package-card">
+                            <div class="package-header">
+                                <h3>SMALL BUSINESS</h3>
+                                <p>Smart Choice for Mid-Sized Companies. Perfect for Growing.</p>
+                            </div>
+                            <div class="package-price">
+                                <span class="price">₹25,000 <small>INR</small></span>
+                                <span class="old-price">$300 USD</span>
+                            </div>
+                            <div class="package-content">
+                                <p><i class="fas fa-check"></i> Perfect for growing businesses</p>
+                                <p><i class="fas fa-check"></i> 15-20 dynamic pages</p>
+                                <p><i class="fas fa-check"></i> Advanced responsive design</p>
+                                <p><i class="fas fa-check"></i> On-page SEO optimization</p>
+                                <p><i class="fas fa-check"></i> Blog/News section</p>
+                                <p><i class="fas fa-check"></i> Social media integration</p>
+                                <div style="text-align: center; margin-top: 25px;">
+                                    <a href="#" class="package-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Ecommerce Package -->
+                        <div class="package-card">
+                            <div class="package-badge">Popular</div>
+                            <div class="package-header">
+                                <h3>ECOMMERCE WEBSITE</h3>
+                                <p>Designed for eCommerce growth with sales-driven features.</p>
+                            </div>
+                            <div class="package-price">
+                                <span class="price">₹40,000 <small>INR</small></span>
+                                <span class="old-price">$500 USD</span>
+                            </div>
+                            <div class="package-content">
+                                <p><i class="fas fa-check"></i> Complete online store setup</p>
+                                <p><i class="fas fa-check"></i> Unlimited products</p>
+                                <p><i class="fas fa-check"></i> Payment gateway integration</p>
+                                <p><i class="fas fa-check"></i> Shopping cart & checkout</p>
+                                <p><i class="fas fa-check"></i> Inventory management</p>
+                                <p><i class="fas fa-check"></i> Order tracking system</p>
+                                <p><i class="fas fa-check"></i> Advanced SEO for eCommerce</p>
+                                <div style="text-align: center; margin-top: 25px;">
+                                    <a href="#" class="package-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <div class="container">
+                    <h2 class="section-title">FAQs On Our <span>Website Development Services</span></h2>
+                    
+                    <div class="faq-container">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Why does my business need a website in India?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>A website builds trust, showcases your services, and helps you reach more customers. With 62% of small businesses in India already online, having a website is essential to stay competitive.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 2 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>What makes Your Digital Crew different from other web development companies?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Your Digital Crew combines affordable pricing with premium quality. We focus on SEO-friendly, mobile-responsive designs that not only look great but also drive traffic and conversions. Our team provides end-to-end support from development to digital marketing.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 3 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How much does it cost to develop a website?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our website packages start from ₹15,000 for startup websites, ₹25,000 for small business websites, and ₹40,000 for eCommerce websites. We also offer custom quotes based on your specific requirements.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 4 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Will my website be SEO-optimized?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, every website we build is SEO-friendly with proper meta tags, clean code, fast loading speed, and mobile responsiveness. We also offer advanced SEO services to help you rank higher on Google.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 5 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can you redesign my existing website?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! We specialize in website redesign and upgrade services. Our team will analyze your current website and transform it into a modern, high-performance site that delivers results.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 6 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Do you provide website maintenance after launch?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we offer comprehensive website maintenance packages including regular updates, security patches, bug fixes, content updates, and 24/7 technical support.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 7 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How long does it take to build a website?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Typically, a standard website takes 2-4 weeks from design to launch. eCommerce websites may take 4-6 weeks depending on the complexity and features required.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 8 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Do you also help in promoting the website?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, Your Digital Crew is a full-service digital marketing agency. We offer SEO, Google Ads, social media marketing, and content marketing services to promote your website and drive traffic.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 9 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Will my website work on mobile devices?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! All websites we build are 100% mobile-responsive and work seamlessly on smartphones, tablets, and desktops. Mobile optimization is a key part of our development process.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 10 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can a website really help me get more customers?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! A professional website acts as your 24/7 sales representative. Combined with SEO and digital marketing, it helps attract targeted traffic, build trust, and convert visitors into paying customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Contact CTA Section -->
+        <div class="cta-section">
+            <div class="container">
+                <h2>Ready to Build Your Website?</h2>
+                <p>Get a free consultation and quote for your business website today</p>
+                <div class="cta-buttons">
+                    <a href="tel:+919212320203" class="cta-btn"><i class="fas fa-phone-alt"></i> Call Us: +91-9212320203</a>
+                    <a href="mailto:INFO@YOURDIGITALCREW.COM" class="cta-btn cta-btn-outline"><i class="fas fa-envelope"></i> Email Us</a>
+                    <a href="https://wa.me/919212320203" class="cta-btn cta-btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER PLACEHOLDER - Your existing footer will load here -->
+        <div id="footer"></div>
+    </div>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Scripts -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load Header from external file
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Header file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                // Initialize dropdown stabilizer after header loads
+                setTimeout(initDropdownStabilizer, 500);
+            })
+            .catch(err => {
+                console.warn('Header file not loaded. Please ensure header.html exists.');
+                document.getElementById('header').innerHTML = `
+                    <div style="background: #000; color: white; padding: 15px; text-align: center;">
+                        Header not loaded. Please check header.html file.
+                    </div>
+                `;
+            });
+
+        // Load Footer from external file
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Footer file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(err => {
+                console.warn('Footer file not loaded. Using fallback footer.');
+                document.getElementById('footer').innerHTML = `
+                    <footer style="background: #000; color: white; text-align: center; padding: 30px; border-top: 3px solid #cc0000;">
+                        <p>© 2025 Your Digital Crew. All rights reserved.</p>
+                        <p><i class="fas fa-phone-alt"></i> +91-9212320203 | <i class="fas fa-envelope"></i> info@yourdigitalcrew.com</p>
+                    </footer>
+                `;
+            });
+
+        // Dropdown Stabilizer Function
+        function initDropdownStabilizer() {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const dropdown = item.querySelector('.dropdown, .mega-menu, .dropdown-submenu-content');
+                if (!dropdown) return;
+                
+                let timeoutId;
+                
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                    dropdown.style.opacity = '1';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.transform = 'translateY(4px)';
+                });
+                
+                item.addEventListener('mouseleave', (e) => {
+                    const relatedTarget = e.relatedTarget;
+                    if (dropdown.contains(relatedTarget)) return;
+                    
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 300);
+                });
+                
+                dropdown.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                });
+                
+                dropdown.addEventListener('mouseleave', () => {
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 200);
+                });
+            });
+        }
+
+        // Sticky Header Function
+        function initStickyHeader() {
+            const headerWrapper = document.querySelector('.header-wrapper');
+            if (headerWrapper) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        headerWrapper.classList.add('scrolled');
+                    } else {
+                        headerWrapper.classList.remove('scrolled');
+                    }
+                });
+            }
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', function() {
+                const parent = this.closest('.faq-item');
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Call sticky header after page loads
+        window.addEventListener('load', function() {
+            initStickyHeader();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>About Us - Your Digital Crew</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://yourdigitalcrew.com/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Content wrapper with white background */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Page Main Content */
+        .page-main {
+            padding: 40px 0;
+        }
+        
+        /* ===== ABOUT US PAGE SPECIFIC STYLES ===== */
+        
+        /* Hero Section with Banner Style */
+        .about-hero {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+            50% { background: linear-gradient(135deg, #ffffff, #fff0f0); }
+            100% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(204,0,0,0.03) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .about-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .about-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            animation: slideDown 1s ease-out;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .about-hero h1 span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .about-hero .subtitle {
+            font-size: 24px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 25px;
+            animation: slideUp 1s ease-out 0.2s both;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .about-hero .subtitle::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #cc0000;
+            animation: expandWidth 1.5s ease-out infinite;
+        }
+        
+        @keyframes expandWidth {
+            0% { width: 50px; opacity: 0.5; }
+            50% { width: 120px; opacity: 1; }
+            100% { width: 50px; opacity: 0.5; }
+        }
+        
+        /* Banner Style Image Section */
+        .banner-section {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #000, #1a1a1a);
+            margin: 40px 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .banner-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+            transition: transform 8s ease;
+        }
+        
+        .banner-section:hover img {
+            transform: scale(1.1);
+        }
+        
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+            width: 80%;
+            max-width: 800px;
+        }
+        
+        .banner-content h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            animation: slideDown 1s ease-out;
+        }
+        
+        .banner-content h2 span {
+            color: #ffd966;
+        }
+        
+        .banner-content p {
+            font-size: 20px;
+            line-height: 1.8;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            animation: slideUp 1s ease-out 0.2s both;
+        }
+        
+        /* About Content Section - WITHOUT BOX */
+        .about-content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px 0;
+        }
+        
+        .about-text {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.9;
+        }
+        
+        .about-text p {
+            margin-bottom: 25px;
+            animation: fadeInUp 1s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .about-text p:nth-child(1) { animation-delay: 0.1s; }
+        .about-text p:nth-child(2) { animation-delay: 0.2s; }
+        .about-text p:nth-child(3) { animation-delay: 0.3s; }
+        .about-text p:nth-child(4) { animation-delay: 0.4s; }
+        .about-text p:nth-child(5) { animation-delay: 0.5s; }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .about-text strong {
+            color: black;
+            font-weight: 600;
+        }
+        
+        /* HIGHLIGHT STYLE - Fixed span styling */
+        .about-text .highlight {
+            /* background: #cc0000; */
+            color: black;
+            padding: 0px 0px;
+            border-radius: 0px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 0 2px;
+            transition: all 0.3s;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .about-text .highlight:hover {
+            background: white;
+            transform: scale(1.05);
+            box-shadow: white;
+        }
+        
+        /* Service Links Styling */
+        .service-links {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            align-items: center;
+        }
+        
+        /* Mission & Vision Cards */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .mv-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .mv-card:nth-child(1) { animation-delay: 0.1s; }
+        .mv-card:nth-child(2) { animation-delay: 0.2s; }
+        
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .mv-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: #cc0000;
+            transform: scaleY(0);
+            transition: transform 0.3s;
+        }
+        
+        .mv-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .mv-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #cc0000;
+            box-shadow: 0 25px 50px rgba(204,0,0,0.2);
+        }
+        
+        .mv-icon {
+            width: 80px;
+            height: 80px;
+            background: #f8f9fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            border: 2px solid #cc0000;
+            animation: bounce 2s infinite;
+        }
+        
+        .mv-icon i {
+            font-size: 40px;
+            color: #cc0000;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .mv-card h3 {
+            font-size: 28px;
+            color: #000;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .mv-card p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 60px 20px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+            border-radius: 30px;
+        }
+        
+        @keyframes pulse-bg {
+            0% { background: linear-gradient(135deg, #cc0000, #8b0000); }
+            50% { background: linear-gradient(135deg, #d00, #a00); }
+            100% { background: linear-gradient(135deg, #cc0000, #8b0000); }
+        }
+        
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stat-item {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .stat-item:nth-child(1) { animation-delay: 0.1s; }
+        .stat-item:nth-child(2) { animation-delay: 0.2s; }
+        .stat-item:nth-child(3) { animation-delay: 0.3s; }
+        .stat-item:nth-child(4) { animation-delay: 0.4s; }
+        
+        .stat-item i {
+            font-size: 50px;
+            color: #ffd966;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+        
+        .stat-item h4 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        
+        .stat-item p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Team Section */
+        .team-section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+            animation: fadeInScale 1s;
+        }
+        
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .section-title span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #cc0000;
+            animation: slideLine 3s ease infinite;
+        }
+        
+        @keyframes slideLine {
+            0% { width: 0; left: 0; }
+            50% { width: 100%; left: 0; }
+            100% { width: 0; left: 100%; }
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .team-member:nth-child(1) { animation-delay: 0.1s; }
+        .team-member:nth-child(2) { animation-delay: 0.2s; }
+        .team-member:nth-child(3) { animation-delay: 0.3s; }
+        .team-member:nth-child(4) { animation-delay: 0.4s; }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            border-color: #cc0000;
+            box-shadow: 0 20px 40px rgba(204,0,0,0.15);
+        }
+        
+        .member-img {
+            width: 120px;
+            height: 120px;
+            background: #f8f9fa;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #cc0000;
+        }
+        
+        .member-img i {
+            font-size: 50px;
+            color: #cc0000;
+        }
+        
+        .team-member h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        
+        .team-member p {
+            color: #cc0000;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .member-social a {
+            width: 35px;
+            height: 35px;
+            background: #f8f9fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cc0000;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .member-social a:hover {
+            background: #cc0000;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 70px 20px;
+            text-align: center;
+            margin: 50px 0 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            animation: slideInLeft 1s;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            position: relative;
+            animation: slideInRight 1s;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            animation: fadeIn 1.5s;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #cc0000;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.4s;
+            border: 2px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(204,0,0,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-outline:hover {
+            background: white;
+            color: #cc0000;
+        }
+        
+        /* Animation Classes */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 36px;
+            }
+            
+            .about-hero .subtitle {
+                font-size: 20px;
+            }
+            
+            .banner-content h2 {
+                font-size: 32px;
+            }
+            
+            .banner-content p {
+                font-size: 16px;
+            }
+            
+            .about-text {
+                font-size: 16px;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+            
+            .cta-btn {
+                padding: 12px 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-hero h1 {
+                font-size: 28px;
+            }
+            
+            .banner-section {
+                height: 300px;
+            }
+            
+            .banner-content h2 {
+                font-size: 24px;
+            }
+        }
+        
+        /* Footer placeholder */
+        #footer {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content wrapper with white background -->
+    <div class="content-wrapper">
+        <!-- HEADER PLACEHOLDER - Your existing header will load here -->
+        <div id="header"></div>
+
+        <!-- ABOUT US PAGE MAIN CONTENT -->
+        <main class="page-main">
+            <!-- Hero Section -->
+            <div class="about-hero">
+                <div class="container">
+                    <h1>About <span>Your Digital Crew</span></h1>
+                    <div class="subtitle">Your Strategic Partner in Digital Growth</div>
+                </div>
+            </div>
+
+            <!-- Banner Section (like your existing banners) -->
+            <div class="container">
+                <div class="banner-section">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" alt="Digital Marketing Team">
+                    <div class="banner-content">
+                        <h2>Your Digital <span>Crew</span></h2>
+                        <p>We are not just marketers—we are your strategic partners in digital growth</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Content - WITHOUT BOX, with HIGHLIGHT spans -->
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                         <p><strong>At YOUR DIGITAL CREW,</strong> we are a team of dedicated digital marketing professionals passionate about helping businesses harness the power of the online world. Specializing in Internet marketing and social media management, we deliver tailored solutions designed to enhance brand visibility, drive engagement, and increase conversions.</p>
+                        
+                        <p>Our expertise spans across various digital marketing services, including 
+                            <span class="service-links">
+                                <a href="social-media.html" class="highlight">social media strategy</a>, 
+                                <a href="content-writing-for-social-media.html" class="highlight">content creation</a>, 
+                                <a href="seo-services.html" class="highlight">SEO</a>, 
+                                <a href="INDEX.HTML" class="highlight">paid advertising</a>, 
+                                <a href="INDEX.HTML" class="highlight">influencer collaborations</a>.
+                            </span>
+                            We understand that each brand is unique, and our goal is to craft personalized strategies that resonate with your target audience and deliver measurable results.</p>
+                        
+                        <p>Whether you're looking to build your brand from the ground up or scale an existing business, we offer a full suite of services to meet your needs. We stay ahead of the latest trends and technologies, ensuring that our clients are always at the forefront of the digital landscape.</p>
+                        
+                        <p><strong>At YOUR DIGITAL CREW, we are not just marketers—we are your strategic partners in digital growth.</strong> We pride ourselves on delivering innovative solutions, high-quality service, and measurable success. Our mission is to help businesses of all sizes unlock their full potential online and achieve sustainable growth in today's competitive market.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission & Vision -->
+            <div class="container">
+                <div class="mission-vision">
+                    <div class="mv-card">
+                        <div class="mv-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To empower businesses of all sizes with innovative digital marketing solutions that drive sustainable growth, enhance brand visibility, and create meaningful connections with their target audience.</p>
+                    </div>
+                    
+                    <div class="mv-card">
+                        <div class="mv-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>To become India's most trusted digital marketing partner, recognized for delivering exceptional results, fostering innovation, and helping businesses unlock their full potential in the digital world.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-smile"></i>
+                            <h4>500+</h4>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>1000+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <h4>10+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <h4>50+</h4>
+                            <p>Team Members</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Contact CTA Section -->
+        <div class="cta-section">
+            <div class="container">
+                <h2>Ready to Grow Your Business?</h2>
+                <p>Let's discuss how we can help you achieve your digital goals</p>
+                <div class="cta-buttons">
+                    <a href="tel:+919212320203" class="cta-btn"><i class="fas fa-phone-alt"></i> Call Us: +91-9212320203</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fas fa-envelope"></i> Email Us</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER PLACEHOLDER - Your existing footer will load here -->
+        <div id="footer"></div>
+    </div>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Scripts with Cache Busting -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Cache busting timestamp
+        const timestamp = new Date().getTime();
+
+        // Load Header from external file
+        fetch(`header.html?v=${timestamp}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Header file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                setTimeout(initDropdownStabilizer, 500);
+            })
+            .catch(err => {
+                console.warn('Header file not loaded:', err);
+                document.getElementById('header').innerHTML = `
+                    <div style="background: #000; color: white; padding: 15px; text-align: center;">
+                        Header not loaded. Please check header file.
+                    </div>
+                `;
+            });
+
+        // Load Footer from external file
+        fetch(`footer.html?v=${timestamp}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Footer file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(err => {
+                console.warn('Footer file not loaded:', err);
+                document.getElementById('footer').innerHTML = `
+                    <footer style="background: #000; color: white; text-align: center; padding: 30px; border-top: 3px solid #cc0000;">
+                        <p>© 2025 Your Digital Crew. All rights reserved.</p>
+                        <p><i class="fas fa-phone-alt"></i> +91-9212320203 | <i class="fas fa-envelope"></i> info@yourdigitalcrew.com</p>
+                    </footer>
+                `;
+            });
+
+        // Dropdown Stabilizer Function
+        function initDropdownStabilizer() {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const dropdown = item.querySelector('.dropdown, .mega-menu, .dropdown-submenu-content');
+                if (!dropdown) return;
+                
+                let timeoutId;
+                
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                    dropdown.style.opacity = '1';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.transform = 'translateY(4px)';
+                });
+                
+                item.addEventListener('mouseleave', (e) => {
+                    const relatedTarget = e.relatedTarget;
+                    if (dropdown.contains(relatedTarget)) return;
+                    
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 300);
+                });
+                
+                dropdown.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                });
+                
+                dropdown.addEventListener('mouseleave', () => {
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 200);
+                });
+            });
+        }
+
+        // Sticky Header Function
+        function initStickyHeader() {
+            const headerWrapper = document.querySelector('.header-wrapper');
+            if (headerWrapper) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        headerWrapper.classList.add('scrolled');
+                    } else {
+                        headerWrapper.classList.remove('scrolled');
+                    }
+                });
+            }
+        }
+
+        // Call sticky header after page loads
+        window.addEventListener('load', function() {
+            initStickyHeader();
+        });
+    </script>
+</body>
+</html>

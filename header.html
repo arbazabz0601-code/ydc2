@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Component</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* header wrapper - EXACT same but WITHOUT sticky */
+        .header-wrapper {
+            position: relative;  /* Changed from sticky to relative */
+            width: 100%;
+            z-index: 100;
+            transition: background 0.4s ease;
+        }
+        .site-header {
+            width: 100%;
+            background: transparent;
+            padding: 5px 0;
+            transition: background 0.4s ease, padding 0.3s, box-shadow 0.3s;
+        }
+        /* when scrolled – solid white */
+        .header-wrapper.scrolled .site-header {
+            background: white;   
+            padding: 0 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Top Header Row */
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            flex-wrap: wrap;
+        }
+        .header-left { flex: 1; display: flex; justify-content: flex-start; }
+        .header-right {
+            flex: 1; display: flex; justify-content: flex-end;
+            align-items: center; gap: 25px;
+        }
+
+        /* book call button */
+        .book-call-btn {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            color: white !important;
+            border: 1px solid rgba(255,255,255,0.6);
+            padding: 8px 22px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            text-decoration: none;
+            border-radius: 40px;
+            transition: all 0.3s;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .book-call-btn:hover {
+            background: black !important;
+            color: #fff !important;
+            transform: scale(1.05);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+            border-color: #fff;
+        }
+
+        .call-us {
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+            color: white;
+            transition: all 0.2s;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        .call-us:hover { color: #ffd966; transform: translateX(2px); }
+
+        /* Logo container */
+        .logo-container { text-align: center; padding: 0 20px; }
+        .logo { max-width: 280px; height: auto; margin: 0 auto; position: relative; }
+        .logo img {
+            width: 100%; 
+            height: auto; 
+            display: block;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* IMPORTANT - Default logo visible, scrolled logo HIDDEN */
+        .logo .logo-default {
+            display: block !important;
+        }
+        .logo .logo-scrolled {
+            display: none !important;
+        }
+
+        /* When scrolled - hide default, show scrolled logo */
+        .header-wrapper.scrolled .logo .logo-default {
+            display: none !important;
+        }
+        .header-wrapper.scrolled .logo .logo-scrolled {
+            display: block !important;
+        }
+
+        /* Desktop Navigation */
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            padding: 10px 0 12px;
+            flex-wrap: wrap;
+        }
+        .nav-item { position: relative; }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s, transform 0.2s;
+        }
+        .nav-link i { font-size: 12px; transition: transform 0.3s; }
+        .nav-item:hover .nav-link {
+            border-bottom-color: #ff0000;
+            color: red;
+            transform: translateY(-2px);
+        }
+        .nav-item:hover .nav-link i { transform: rotate(180deg); }
+
+        /* Dropdown */
+        .dropdown {
+            position: absolute; top: 100%; left: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            min-width: 240px;
+            opacity: 0; visibility: hidden;
+            transform: translateY(12px);
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+            border-radius: 8px;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        .nav-item:hover .dropdown {
+            opacity: 1; visibility: visible;
+            transform: translateY(4px);
+        }
+        .dropdown a {
+            display: block; padding: 10px 22px; color: black;
+            text-decoration: none; font-size: 16px; font-weight: 500;
+            transition: background 0.2s, transform 0.2s, color 0.2s;
+        }
+        .dropdown a:hover {
+            background: red;
+            color: white;
+            transform: translateX(6px);
+        }
+
+        /* Nested dropdown styles for CRM SOFTWARE */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu > a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown-submenu-content {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            min-width: 260px;
+            box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+            border-radius: 8px;
+            padding: 10px 0;
+            display: none;
+            z-index: 1000;
+            border: 1px solid #cc0000;
+        }
+
+        .dropdown-submenu:hover .dropdown-submenu-content {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .dropdown-submenu-content a {
+            color: #222 !important;
+            padding: 12px 22px !important;
+            text-decoration: none !important;
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+        }
+
+        .dropdown-submenu-content a:hover {
+            background: #cc0000 !important;
+            color: white !important;
+            transform: translateX(5px);
+            border-left-color: #ffd966;
+        }
+
+        /* Scroll hone par text black */
+        .header-wrapper.scrolled .nav-link,
+        .header-wrapper.scrolled .call-us {
+            color: black !important;
+        }
+
+        .header-wrapper.scrolled .book-call-btn {
+            background: rgba(0, 0, 0, 0.1);
+            border-color: black;
+            color: black !important;
+        }
+
+        .header-wrapper.scrolled .book-call-btn:hover {
+            background: black;
+            color: white !important;
+        }
+
+        .header-wrapper.scrolled .nav-link i {
+            color: black;
+        }
+
+        .header-wrapper.scrolled .nav-link:hover {
+            color: #cc0000 !important;
+            border-bottom-color: #cc0000;
+        }
+
+        .header-wrapper:not(.scrolled) .site-header {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main-nav { gap: 18px; }
+        }
+        @media (max-width: 800px) {
+            .header-top { flex-direction: column; gap: 8px; }
+            .main-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER WRAPPER - EXACT same as index.html but without sticky -->
+    <div class="header-wrapper" id="headerWrapper">
+        <header class="site-header">
+            <div class="container">
+                <!-- Top Row -->
+                <div class="header-top">
+                    <div class="header-left">
+                        <a href="#" class="book-call-btn" id="freeAuditBtn">GET FREE WEBSITE AUDIT</a>
+                    </div>
+
+                    <div class="logo-container">
+                        <div class="logo">
+                            <!-- Default Logo (shown normally) -->
+                            <img src="ff.png" alt="Your Digital Team" class="logo-default">
+                            <!-- Scrolled Logo (hidden initially, shows on scroll) -->
+                            <img src="b-logo.jpeg" alt="Your Digital Team" class="logo-scrolled">
+                        </div>
+                    </div>
+
+                    <div class="header-right">
+                        <a href="#" class="book-call-btn" id="callNowBtn"><i class="fas fa-phone-alt"></i> CALL US: +91-9212320203</a>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="main-nav">
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">DESIGNING & DEVELOPMENT <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="website-design-service.html">WEBSITE DESIGN SERVICE</a>
+                            <a href="e-commerce-website-design.html">E-COMMERCE WEBSITE DESIGN</a>
+                            <a href="website-development.html">WEBSITE DEVELOPMENT</a>
+                            <a href="dynamic-website-design.html">DYNAMIC WEBSITE DESIGN</a>
+                            <a href="php-website-development.html">PHP WEBSITE DEVELOPMENT</a>
+                            <a href="wordpress-development.html">WORDPRESS DEVELOPMENT</a>
+                            
+                            <!-- CRM SOFTWARE with nested dropdown -->
+                            <div class="dropdown-submenu">
+                                <a href="#">CRM SOFTWARE <i class="fas fa-chevron-right"></i></a>
+                                <div class="dropdown-submenu-content">
+                                    <a href="crm-software-for-schools.html">CRM SOFTWARE FOR SCHOOLS</a>
+                                    <a href="crm-for-super-market.html">CRM FOR SUPER MARKET</a>
+                                    <a href="crm-for-hospital.html">CRM FOR HOSPITAL</a>
+                                    <a href="crm-for-manufacturing-business.html">CRM FOR MANUFACTURING BUSINESS</a>
+                                </div>
+                            </div>
+                            
+                            <a href="portal-development.html">PORTAL DEVELOPMENT</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">GOOGLE PROMOTION <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="local-business-listing-services.html">LOCAL BUSINESS LISTING SERVICES</a>
+                            <a href="gmb-listing-optimization.html">GMB LISTING OPTIMIZATION</a>
+                            <a href="ppc-ads.html">PPC ADS</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">SEO <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="local-seo-services.html">LOCAL SEO SERVICES</a>
+                            <a href="on-page-seo-services.html">ON-PAGE SEO SERVICES</a>
+                            <a href="off-page-seo-services.html">OFF-PAGE SEO SERVICES</a>
+                            <a href="seo-services.html">SEO SERVICES</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">SMO <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="social-media-marketing.html">SOCIAL MEDIA</a>
+                            <a href="content-writing-for-social-media.html">CONTENT WRITING FOR SOCIAL MEDIA</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">INDUSTRIES <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="hospital-marketing.html">HOSPITAL MARKETING</a>
+                            <a href="tour-and-travels-marketing.html">TOUR AND TRAVELS MARKETING</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="contact.html" class="nav-link">CONTACT</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <script>
+        // ==================== EXACT SAME SCRIPT AS INDEX.HTML ====================
+        (function() {
+            const headerWrapper = document.getElementById('headerWrapper');
+            
+            function updateSticky() {
+                if (window.scrollY > 30) {
+                    headerWrapper.classList.add('scrolled');
+                } else {
+                    headerWrapper.classList.remove('scrolled');
+                }
+            }
+            
+            window.addEventListener('scroll', updateSticky);
+            updateSticky();
+
+            // Button Event Listeners
+            const freeAuditBtn = document.getElementById('freeAuditBtn');
+            const callNowBtn = document.getElementById('callNowBtn');
+            
+            if(freeAuditBtn) {
+                freeAuditBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    alert("📊 FREE WEBSITE AUDIT REQUEST SENT!\n\nOur expert will analyze your website and provide a detailed report within 24 hours.\nCall us: +91-9212320203");
+                });
+            }
+            
+            if(callNowBtn) {
+                callNowBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = "tel:+919212320203";
+                });
+            }
+
+            // Dropdown Stabilizer
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const dropdown = item.querySelector('.dropdown');
+                if (!dropdown) return;
+                
+                let timeoutId;
+                
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                    dropdown.style.opacity = '1';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.transform = 'translateY(4px)';
+                });
+                
+                item.addEventListener('mouseleave', (e) => {
+                    const relatedTarget = e.relatedTarget;
+                    if (dropdown.contains(relatedTarget)) return;
+                    
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 300);
+                });
+                
+                dropdown.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                });
+                
+                dropdown.addEventListener('mouseleave', () => {
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 200);
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Website Design Service - Best Web Development Agency Delhi India | Your Digital Crew</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://yourdigitalcrew.com/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Content wrapper with white background */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Page Main Content */
+        .page-main {
+            padding: 40px 0;
+        }
+        
+        /* ===== WEBSITE DESIGN PAGE SPECIFIC STYLES WITH ANIMATIONS ===== */
+        
+        /* Hero Section with Animation */
+        .design-hero {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+            50% { background: linear-gradient(135deg, #ffffff, #fff0f0); }
+            100% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+        }
+        
+        .design-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(204,0,0,0.03) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .design-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .design-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            animation: slideDown 1s ease-out;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .design-hero h1 span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .design-hero h3 {
+            font-size: 28px;
+            font-weight: 500;
+            color: #cc0000;
+            margin-bottom: 25px;
+            animation: slideUp 1s ease-out 0.2s both;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .design-hero h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #cc0000;
+            animation: expandWidth 1.5s ease-out infinite;
+        }
+
+        
+        
+        @keyframes expandWidth {
+            0% { width: 50px; opacity: 0.5; }
+            50% { width: 120px; opacity: 1; }
+            100% { width: 50px; opacity: 0.5; }
+        }
+        
+        .design-hero p {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.8;
+            animation: fadeIn 1.5s ease-out 0.4s both;
+        }
+        
+        /* Quick Connect with Animation */
+        .quick-connect {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            margin: 40px auto;
+            border-radius: 15px;
+            max-width: 800px;
+            border-left: 5px solid #cc0000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: perspective(1000px) rotateX(0deg);
+            transition: all 0.5s;
+            animation: glow 2s infinite;
+        }
+        
+        .quick-connect:hover {
+            transform: perspective(1000px) rotateX(2deg) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(204,0,0,0.2);
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+            50% { box-shadow: 0 15px 40px rgba(204,0,0,0.15); }
+            100% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        }
+        
+        .quick-connect h3 {
+            color: #000;
+            font-size: 26px;
+            margin-bottom: 5px;
+            animation: slideInRight 1s;
+        }
+        
+        .quick-connect p {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        /* Section Title with Animation */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+            animation: fadeInScale 1s;
+        }
+        
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .section-title span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #cc0000;
+            animation: slideLine 3s ease infinite;
+        }
+        
+        @keyframes slideLine {
+            0% { width: 0; left: 0; }
+            50% { width: 100%; left: 0; }
+            100% { width: 0; left: 100%; }
+        }
+        
+        /* Why Matters Section */
+        .why-matters {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .why-matters::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, transparent, #cc0000, transparent);
+            animation: slideBorder 3s linear infinite;
+        }
+        
+        @keyframes slideBorder {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .matters-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        
+        .matter-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .matter-card:nth-child(1) { animation-delay: 0.1s; }
+        .matter-card:nth-child(2) { animation-delay: 0.2s; }
+        .matter-card:nth-child(3) { animation-delay: 0.3s; }
+        .matter-card:nth-child(4) { animation-delay: 0.4s; }
+        .matter-card:nth-child(5) { animation-delay: 0.5s; }
+        
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .matter-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: #cc0000;
+            transform: scaleY(1);
+            transition: transform 0.3s;
+        }
+        
+        .matter-card:hover::before {
+            transform: scaleY(1.2);
+        }
+        
+        .matter-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #cc0000;
+            box-shadow: 0 20px 40px rgba(204,0,0,0.15);
+        }
+        
+        .matter-card i {
+            font-size: 50px;
+            color: #cc0000;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .matter-card h4 {
+            color: #000;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .matter-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        /* Packages Section */
+        .packages-section {
+            padding: 60px 0;
+        }
+        
+        .packages-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        
+        .package-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+            transition: all 0.4s;
+            position: relative;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .package-card:nth-child(1) { animation-delay: 0.1s; }
+        .package-card:nth-child(2) { animation-delay: 0.2s; }
+        .package-card:nth-child(3) { animation-delay: 0.3s; }
+        
+        .package-card:hover {
+            border-color: #cc0000;
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(204,0,0,0.2);
+        }
+        
+        .package-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #cc0000;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 2;
+            animation: pulse 2s infinite;
+        }
+        
+        .package-header {
+            background: linear-gradient(135deg, #000, #1a1a1a);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .package-header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .package-header h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .package-header p {
+            font-size: 14px;
+            color: #ffd966;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .package-price {
+            background: linear-gradient(45deg, #cc0000, #990000);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .package-price::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            animation: rotate 15s linear infinite;
+        }
+        
+        .package-price .price {
+            font-size: 36px;
+            font-weight: 800;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .package-price small {
+            font-size: 14px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .package-price .old-price {
+            font-size: 18px;
+            color: rgba(255,255,255,0.6);
+            text-decoration: line-through;
+            margin-left: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .package-content {
+            padding: 30px 20px;
+        }
+        
+        .package-content p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.7;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .package-content i {
+            color: #cc0000;
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+        
+        .package-content p:hover i {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        .package-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #cc0000, #990000);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.4s;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .package-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .package-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .package-btn:hover {
+            background: transparent;
+            color: #cc0000;
+            border-color: #cc0000;
+            transform: scale(1.05);
+        }
+        
+        /* CTA Section with Animation */
+        .cta-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 70px 20px;
+            text-align: center;
+            margin: 50px 0 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        @keyframes pulse-bg {
+            0% { background: linear-gradient(135deg, #cc0000, #8b0000); }
+            50% { background: linear-gradient(135deg, #d00, #a00); }
+            100% { background: linear-gradient(135deg, #cc0000, #8b0000); }
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            animation: slideInLeft 1s;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            position: relative;
+            animation: slideInRight 1s;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            animation: fadeIn 1.5s;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #cc0000;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.4s;
+            border: 2px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(204,0,0,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-outline:hover {
+            background: white;
+            color: #cc0000;
+        }
+        
+        /* ===== 6 REQUIRED ELEMENTS WITH YELLOW COLOR ONLY ===== */
+        
+        /* 1. ON-PAGE SEO (already in head) */
+        
+        /* 2. UX & DESIGN - Mobile responsive (already in code) */
+        
+        /* 3. HIGH-QUALITY & UNIQUE CONTENT - NEW SECTION */
+        .unique-content-section {
+            padding: 40px 20px;
+            background: #ffffff;
+            margin: 30px 0;
+        }
+        
+        .unique-content-box {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #ffd966; /* Yellow */
+        }
+        
+        .unique-content-box h3 {
+            font-size: 28px;
+            color: #000;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .unique-content-box h3 i {
+            color: #ffd966; /* Yellow */
+            margin-right: 10px;
+        }
+        
+        .unique-content-box ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .unique-content-box ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .unique-content-box ul li i {
+            color: #ffd966; /* Yellow */
+            font-size: 18px;
+        }
+        
+        /* 4. TECHNICAL SEO - NEW SECTION */
+        .tech-seo-section {
+            padding: 40px 20px;
+            background: #f8f9fa;
+            margin: 30px 0;
+        }
+        
+        .tech-seo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .tech-seo-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border-bottom: 3px solid #ffd966; /* Yellow */
+        }
+        
+        .tech-seo-item i {
+            font-size: 36px;
+            color: #ffd966; /* Yellow */
+            margin-bottom: 10px;
+        }
+        
+        .tech-seo-item h4 {
+            font-size: 18px;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        
+        .tech-seo-item p {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        /* 5. TRUST FACTORS - NEW SECTION */
+        .trust-section {
+            padding: 40px 20px;
+            background: #ffffff;
+            margin: 30px 0;
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto 30px;
+        }
+        
+        .trust-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            border-top: 3px solid #ffd966; /* Yellow */
+        }
+        
+        .trust-card i {
+            font-size: 40px;
+            color: #ffd966; /* Yellow */
+            margin-bottom: 15px;
+        }
+        
+        .trust-card h4 {
+            font-size: 20px;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        
+        .trust-card p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .testimonials-mini {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-mini {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 3px solid #ffd966; /* Yellow */
+        }
+        
+        .testimonial-mini i {
+            color: #ffd966; /* Yellow */
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        
+        .testimonial-mini p {
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        .client-mini {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .client-mini i {
+            font-size: 30px;
+            color: #ffd966; /* Yellow */
+        }
+        
+        .client-mini h5 {
+            font-size: 16px;
+            color: #000;
+        }
+        
+        .contact-mini {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .contact-mini-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-mini-item i {
+            color: #ffd966; /* Yellow */
+            font-size: 20px;
+        }
+        
+        .legal-mini {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .legal-mini a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+        
+        .legal-mini a:hover {
+            color: #cc0000;
+        }
+        
+        /* 6. USER ENGAGEMENT & ANALYTICS - NEW SECTION */
+        .engagement-section {
+            padding: 40px 20px;
+            background: #f8f9fa;
+            margin: 30px 0;
+        }
+        
+        .engagement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .engagement-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            border-bottom: 3px solid #ffd966; /* Yellow */
+        }
+        
+        .engagement-item i {
+            font-size: 40px;
+            color: #ffd966; /* Yellow */
+            margin-bottom: 15px;
+        }
+        
+        .engagement-item h4 {
+            font-size: 20px;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        
+        .engagement-item p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .comment-mini {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .comment-mini input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .comment-mini button {
+            background: #ffd966; /* Yellow */
+            color: #000;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .share-mini {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .share-mini a {
+            width: 35px;
+            height: 35px;
+            background: #ffd966; /* Yellow */
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        
+        .newsletter-mini {
+            display: flex;
+            gap: 5px;
+        }
+        
+        .newsletter-mini input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .newsletter-mini button {
+            background: #ffd966; /* Yellow */
+            color: #000;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .design-hero h1 {
+                font-size: 36px;
+            }
+            .design-hero h3 {
+                font-size: 22px;
+            }
+            .section-title {
+                font-size: 32px;
+            }
+            .unique-content-box ul {
+                grid-template-columns: 1fr;
+            }
+            .contact-mini {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .design-hero h1 {
+                font-size: 28px;
+            }
+        }
+        
+        /* Footer placeholder */
+        #footer {
+            margin-top: 0;
+        }
+
+        /* ========== HEADER CSS - STICKY + SCROLL EFFECTS ========== */
+        /* Header Wrapper - Sticky Container */
+        .header-wrapper {
+            position: relative;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        /* Site Header Base */
+        .site-header {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+            backdrop-filter: blur(8px);
+            padding: 15px 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Scrolled State - Solid White Background */
+        .header-wrapper.scrolled .site-header {
+            background: #ffffff !important;
+            padding: 8px 0;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+            border-bottom: 2px solid #cc0000;
+            backdrop-filter: none;
+        }
+        
+        /* Container inside header */
+        .site-header .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        
+        /* Header Top Row */
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            flex-wrap: wrap;
+        }
+        
+        .header-left, .header-right {
+            flex: 1;
+            display: flex;
+        }
+        
+        .header-left {
+            justify-content: flex-start;
+        }
+        
+        .header-right {
+            justify-content: flex-end;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        /* Logo Container - Logo Swapping on Scroll */
+        .logo-container {
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            max-width: 220px;
+            height: auto;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Default Logo Visible */
+        .logo .logo-default {
+            display: block !important;
+        }
+        
+        .logo .logo-scrolled {
+            display: none !important;
+        }
+        
+        /* On Scroll - Swap Logos */
+        .header-wrapper.scrolled .logo .logo-default {
+            display: none !important;
+        }
+        
+        .header-wrapper.scrolled .logo .logo-scrolled {
+            display: block !important;
+        }
+        
+        /* Book Call Button */
+        .book-call-btn {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            padding: 10px 28px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            color: white !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .book-call-btn:hover {
+            background: #cc0000 !important;
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 20px rgba(204, 0, 0, 0.3);
+            border-color: #ffd966;
+            color: white !important;
+        }
+        
+        /* Header Icons & Links */
+        .call-us, .login-link, .search-icon, .cart-icon {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .call-us {
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .call-us:hover, .login-link:hover {
+            color: #ffd966;
+            transform: translateX(3px);
+        }
+        
+        .search-icon, .cart-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .search-icon:hover, .cart-icon:hover {
+            color: #ffd966;
+            transform: scale(1.2);
+        }
+        
+        /* Main Navigation */
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            padding: 5px 0 10px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        /* Nav Link Underline Effect */
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #ff0000;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        
+        .nav-link i {
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-item:hover .nav-link {
+            color: #ff0000;
+            transform: translateY(-2px);
+        }
+        
+        .nav-item:hover .nav-link i {
+            transform: rotate(180deg);
+        }
+        
+        /* Dropdown Menu */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            min-width: 260px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            border-radius: 12px;
+            padding: 12px 0;
+            z-index: 1000;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(204, 0, 0, 0.2);
+        }
+        
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+        
+        .dropdown a {
+            display: block;
+            padding: 10px 25px;
+            color: #222;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .dropdown a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #cc0000, #990000);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+        
+        .dropdown a:hover::before {
+            left: 0;
+        }
+        
+        .dropdown a:hover {
+            color: white;
+            transform: translateX(8px);
+            border-left-color: #ffd966;
+        }
+        
+        /* Nested Dropdown (CRM Submenu) */
+        .dropdown-submenu {
+            position: relative;
+        }
+        
+        .dropdown-submenu > a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .dropdown-submenu-content {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: white;
+            min-width: 280px;
+            border-radius: 12px;
+            padding: 10px 0;
+            display: none;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 2px solid #cc0000;
+            z-index: 1001;
+        }
+        
+        .dropdown-submenu:hover .dropdown-submenu-content {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .dropdown-submenu-content a {
+            padding: 12px 25px !important;
+            font-size: 14px;
+        }
+        
+        /* Scroll State - Text Colors Change to Black */
+        .header-wrapper.scrolled .nav-link,
+        .header-wrapper.scrolled .call-us,
+        .header-wrapper.scrolled .login-link,
+        .header-wrapper.scrolled .search-icon,
+        .header-wrapper.scrolled .cart-icon {
+            color: #000000 !important;
+            text-shadow: none;
+        }
+        
+        .header-wrapper.scrolled .nav-link:hover {
+            color: #cc0000 !important;
+        }
+        
+        .header-wrapper.scrolled .nav-link::before {
+            background: #cc0000;
+        }
+        
+        .header-wrapper.scrolled .book-call-btn {
+            background: #000000;
+            border-color: #cc0000;
+            color: white !important;
+        }
+        
+        .header-wrapper.scrolled .book-call-btn:hover {
+            background: #cc0000 !important;
+            transform: translateY(-2px) scale(1.03);
+        }
+    </style>
+</head>
+<body>
+    <!-- Content wrapper with white background -->
+    <div class="content-wrapper">
+        <!-- HEADER PLACEHOLDER - Your existing header will load here -->
+        <div id="header"></div>
+
+        <!-- WEBSITE DESIGN PAGE MAIN CONTENT -->
+        <main class="page-main">
+            <!-- Hero Section (Original) -->
+            <div class="design-hero">
+                <div class="container">
+                    <h1>Websites That Rank, Run & Rock on Every Device</h1>
+                    <h3>Best Web Development Agency in Delhi India</h3>
+                    <p>Looking for the best web design company in India to grow your online presence? At Your Digital Crew, we specialize in conversion-focused web design services that transform visitors into paying customers.</p>
+                    <p style="margin-top: 20px;">Our expert team blends creative UI/UX design, SEO-friendly development, mobile optimization, and digital marketing strategies to build websites that don't just look great but also drive sales and leads.</p>
+                </div>
+            </div>
+
+            <!-- Quick Connect (Original) -->
+            <div class="container">
+                <div class="quick-connect" data-aos="flip-up">
+                    <h3>Quick Connect</h3>
+                    <p>Your Digital Crew – Websites That Rank, Run & Rock on Every Device</p>
+                </div>
+            </div>
+
+            <!-- Why Matters Section (Original) -->
+            <div class="why-matters">
+                <div class="container">
+                    <h2 class="section-title">Why Having a <span>Good Website Design</span> Matters in 2025?</h2>
+                    <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; color: #555; font-size: 18px;">In today's digital-first world, your website is more than just an online presence — it's your brand's identity, sales tool, and trust builder. As we step into 2025, the importance of professional website design has grown even more. Here's why:</p>
+                    
+                    <div class="matters-grid">
+                        <div class="matter-card">
+                            <i class="fas fa-star"></i>
+                            <h4>First Impressions Decide Conversions</h4>
+                            <p>Your website is often the first touch point with potential customers. A modern, responsive, and visually appealing design immediately builds trust, while a poorly designed site can drive visitors away within seconds.</p>
+                        </div>
+                        
+                        <div class="matter-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>Mobile-First & User Experience</h4>
+                            <p>With over 80% of traffic coming from mobile devices in 2025, a mobile-friendly and fast-loading website is non-negotiable. User-centric navigation ensures visitors find what they need quickly, boosting conversions.</p>
+                        </div>
+                        
+                        <div class="matter-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>SEO Ranking & Benefits</h4>
+                            <p>Google prioritizes websites that are SEO-optimized, mobile-responsive, and offer smooth user experience. A good design directly impacts your search engine rankings, helping you stay ahead of competitors.</p>
+                        </div>
+                        
+                        <div class="matter-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Brand Credibility & Trust</h4>
+                            <p>In 2025, customers judge your business credibility within seconds. A professional website design communicates reliability, professionalism, and authority — essential for long-term growth.</p>
+                        </div>
+                        
+                        <div class="matter-card">
+                            <i class="fas fa-bullseye"></i>
+                            <h4>Conversion-Focused Approach</h4>
+                            <p>Every button, call-to-action, and layout element should guide users toward action — be it a purchase, inquiry, or signup. A conversion-focused design ensures your website works as a 24/7 sales machine.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== 3. HIGH-QUALITY & UNIQUE CONTENT (NEW - Yellow only) ===== -->
+            <div class="unique-content-section">
+                <div class="container">
+                    <h2 class="section-title"><span>High-Quality & Unique</span> Content</h2>
+                    <div class="unique-content-box">
+                        <h3><i class="fas fa-crown"></i> Original Content That Makes You Stand Out</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> 100% Original, Custom-Written Content</li>
+                            <li><i class="fas fa-check-circle"></i> Value-Added Guides, Tips & Information</li>
+                            <li><i class="fas fa-check-circle"></i> High-Quality Original Images & Branding</li>
+                            <li><i class="fas fa-check-circle"></i> Unique Logo, Color Scheme & Design</li>
+                            <li><i class="fas fa-check-circle"></i> Content That Solves User Problems</li>
+                            <li><i class="fas fa-check-circle"></i> Google Loves Unique Content</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Packages Section (Original) -->
+            <div class="packages-section">
+                <div class="container">
+                    <h2 class="section-title">Budget-Friendly <span>Best Websites</span></h2>
+                    
+                    <div class="packages-grid">
+                        <!-- Startup Package -->
+                        <div class="package-card">
+                            <div class="package-header">
+                                <h3>STARTUP WEBSITE</h3>
+                                <p>Best for Small Business. Smart Websites for New Startups</p>
+                            </div>
+                            <div class="package-price">
+                                <span class="price">₹15,000 <small>INR</small></span>
+                                <span class="old-price">$200 USD</span>
+                            </div>
+                            <div class="package-content">
+                                <p><i class="fas fa-check"></i> Perfect for new businesses and startups</p>
+                                <p><i class="fas fa-check"></i> 5-10 dynamic pages</p>
+                                <p><i class="fas fa-check"></i> Mobile responsive design</p>
+                                <p><i class="fas fa-check"></i> Basic SEO setup</p>
+                                <p><i class="fas fa-check"></i> Contact form integration</p>
+                                <div style="text-align: center; margin-top: 25px;">
+                                    <a href="#" class="package-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Small Business Package -->
+                        <div class="package-card">
+                            <div class="package-header">
+                                <h3>SMALL BUSINESS</h3>
+                                <p>Smart Choice for Mid-Sized Companies. Perfect for Growing.</p>
+                            </div>
+                            <div class="package-price">
+                                <span class="price">₹25,000 <small>INR</small></span>
+                                <span class="old-price">$300 USD</span>
+                            </div>
+                            <div class="package-content">
+                                <p><i class="fas fa-check"></i> Perfect for growing businesses</p>
+                                <p><i class="fas fa-check"></i> 15-20 dynamic pages</p>
+                                <p><i class="fas fa-check"></i> Advanced responsive design</p>
+                                <p><i class="fas fa-check"></i> On-page SEO optimization</p>
+                                <p><i class="fas fa-check"></i> Blog/News section</p>
+                                <p><i class="fas fa-check"></i> Social media integration</p>
+                                <div style="text-align: center; margin-top: 25px;">
+                                    <a href="#" class="package-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Ecommerce Package -->
+                        <div class="package-card">
+                            <div class="package-badge">Popular</div>
+                            <div class="package-header">
+                                <h3>ECOMMERCE WEBSITE</h3>
+                                <p>Designed for eCommerce growth with sales-driven features.</p>
+                            </div>
+                            <div class="package-price">
+                                <span class="price">₹40,000 <small>INR</small></span>
+                                <span class="old-price">$500 USD</span>
+                            </div>
+                            <div class="package-content">
+                                <p><i class="fas fa-check"></i> Complete online store setup</p>
+                                <p><i class="fas fa-check"></i> Unlimited products</p>
+                                <p><i class="fas fa-check"></i> Payment gateway integration</p>
+                                <p><i class="fas fa-check"></i> Shopping cart & checkout</p>
+                                <p><i class="fas fa-check"></i> Inventory management</p>
+                                <p><i class="fas fa-check"></i> Order tracking system</p>
+                                <p><i class="fas fa-check"></i> Advanced SEO for eCommerce</p>
+                                <div style="text-align: center; margin-top: 25px;">
+                                    <a href="#" class="package-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== 4. TECHNICAL SEO (NEW - Yellow only) ===== -->
+            <div class="tech-seo-section">
+                <div class="container">
+                    <h2 class="section-title"><span>Technical SEO</span> (The Backend)</h2>
+                    <div class="tech-seo-grid">
+                        <div class="tech-seo-item">
+                            <i class="fas fa-sitemap"></i>
+                            <h4>XML Sitemap</h4>
+                            <p>Tells Google which pages are important</p>
+                        </div>
+                        <div class="tech-seo-item">
+                            <i class="fas fa-robot"></i>
+                            <h4>Robots.txt</h4>
+                            <p>Controls crawling and indexing</p>
+                        </div>
+                        <div class="tech-seo-item">
+                            <i class="fas fa-lock"></i>
+                            <h4>SSL Certificate</h4>
+                            <p>Secure padlock for user safety</p>
+                        </div>
+                        <div class="tech-seo-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <h4>Website Speed</h4>
+                            <p>Optimized code & compressed images</p>
+                        </div>
+                        <div class="tech-seo-item">
+                            <i class="fas fa-code"></i>
+                            <h4>Schema Markup</h4>
+                            <p>Rich snippets for better CTR</p>
+                        </div>
+                        <div class="tech-seo-item">
+                            <i class="fas fa-link"></i>
+                            <h4>Broken Links Check</h4>
+                            <p>No 404 errors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== 5. TRUST FACTORS (NEW - Yellow only) ===== -->
+            <div class="trust-section">
+                <div class="container">
+                    <h2 class="section-title"><span>Trust Factors</span> & Uniqueness</h2>
+                    
+                    <div class="trust-grid">
+                        <div class="trust-card">
+                            <i class="fas fa-users"></i>
+                            <h4>About Us Page</h4>
+                            <p>Know who we are and why we built this website</p>
+                        </div>
+                        <div class="trust-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Contact Page</h4>
+                            <p>Address, email & phone number for real trust</p>
+                        </div>
+                        <div class="trust-card">
+                            <i class="fas fa-file-contract"></i>
+                            <h4>Privacy Policy & Terms</h4>
+                            <p>Especially important if you collect data</p>
+                        </div>
+                        <div class="trust-card">
+                            <i class="fas fa-comments"></i>
+                            <h4>Social Proof</h4>
+                            <p>Testimonials, reviews & case studies</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonials Mini -->
+                    <div class="testimonials-mini">
+                        <div class="testimonial-mini">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Your Digital Crew transformed our online presence completely. Highly recommended!"</p>
+                            <div class="client-mini">
+                                <i class="fas fa-user-circle"></i>
+                                <h5>Rajesh Sharma</h5>
+                            </div>
+                        </div>
+                        <div class="testimonial-mini">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Professional team, delivered before deadline. 5 star service!"</p>
+                            <div class="client-mini">
+                                <i class="fas fa-user-circle"></i>
+                                <h5>Priya Singh</h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Details -->
+                    <div class="contact-mini">
+                        <div class="contact-mini-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123, Connaught Place, New Delhi</span>
+                        </div>
+                        <div class="contact-mini-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91-9212320203</span>
+                        </div>
+                        <div class="contact-mini-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@yourdigitalcrew.com</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Legal Links -->
+                    <div class="legal-mini">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== 6. USER ENGAGEMENT & ANALYTICS (NEW - Yellow only) ===== -->
+            <div class="engagement-section">
+                <div class="container">
+                    <h2 class="section-title"><span>User Engagement</span> & Analytics</h2>
+                    
+                    <div class="engagement-grid">
+                        <div class="engagement-item">
+                            <i class="fab fa-google"></i>
+                            <h4>Google Analytics</h4>
+                            <p>Track visitors, sources, behavior & more</p>
+                        </div>
+                        <div class="engagement-item">
+                            <i class="fas fa-search"></i>
+                            <h4>Google Search Console</h4>
+                            <p>Monitor your site's performance in Google</p>
+                        </div>
+                        <div class="engagement-item">
+                            <i class="fas fa-comment"></i>
+                            <h4>Comments Section</h4>
+                            <div class="comment-mini">
+                                <input type="text" placeholder="Leave a comment...">
+                                <button>Post</button>
+                            </div>
+                        </div>
+                        <div class="engagement-item">
+                            <i class="fas fa-share-alt"></i>
+                            <h4>Social Sharing</h4>
+                            <div class="share-mini">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div style="max-width: 500px; margin: 30px auto 0; text-align: center;">
+                        <h4 style="margin-bottom: 15px;">Subscribe to Our Newsletter</h4>
+                        <div class="newsletter-mini">
+                            <input type="email" placeholder="Your Email Address">
+                            <button>Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact CTA Section (Original) -->
+            <div class="cta-section">
+                <div class="container">
+                    <h2>Ready to Build Your Dream Website?</h2>
+                    <p>Get a free consultation and quote for your business website today</p>
+                    <div class="cta-buttons">
+                        <a href="tel:+919212320203" class="cta-btn"><i class="fas fa-phone-alt"></i> Call Us: +91-9212320203</a>
+                        <a href="#" class="cta-btn cta-btn-outline"><i class="fas fa-envelope"></i> Email Us</a>
+                        <a href="#" class="cta-btn cta-btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER PLACEHOLDER - Your existing footer will load here -->
+        <div id="footer"></div>
+    </div>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Scripts -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Sticky Header Scroll Effect
+        function initStickyHeader() {
+            const headerElement = document.querySelector('.header-wrapper');
+            if (headerElement) {
+                function updateSticky() {
+                    if (window.scrollY > 50) {
+                        headerElement.classList.add('scrolled');
+                    } else {
+                        headerElement.classList.remove('scrolled');
+                    }
+                }
+                window.addEventListener('scroll', updateSticky);
+                updateSticky();
+            }
+        }
+
+        // Load Header from external file
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Header file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                setTimeout(() => {
+                    initDropdownStabilizer();
+                    initStickyHeader();
+                }, 100);
+            })
+            .catch(err => {
+                console.warn('Header file not loaded.');
+                document.getElementById('header').innerHTML = `
+                    <div class="header-wrapper">
+                        <div class="site-header" style="background: #000; color: white; padding: 15px; text-align: center;">
+                            Header not loaded. Please check header.html file.
+                        </div>
+                    </div>
+                `;
+                initStickyHeader();
+            });
+
+        // Load Footer from external file
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Footer file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(err => {
+                console.warn('Footer file not loaded.');
+                document.getElementById('footer').innerHTML = `
+                    <footer style="background: #000; color: white; text-align: center; padding: 30px; border-top: 3px solid #cc0000;">
+                        <p>© 2025 Your Digital Crew. All rights reserved.</p>
+                        <p><i class="fas fa-phone-alt"></i> +91-9212320203 | <i class="fas fa-envelope"></i> info@yourdigitalcrew.com</p>
+                    </footer>
+                `;
+            });
+
+        function initDropdownStabilizer() {
+            // Dropdown function for nested menus if needed
+            const submenus = document.querySelectorAll('.dropdown-submenu');
+            submenus.forEach(submenu => {
+                submenu.addEventListener('mouseenter', function() {
+                    const content = this.querySelector('.dropdown-submenu-content');
+                    if (content) {
+                        content.style.display = 'block';
+                    }
+                });
+                submenu.addEventListener('mouseleave', function() {
+                    const content = this.querySelector('.dropdown-submenu-content');
+                    if (content) {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Social Media Management Services - Your Digital Crew</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://yourdigitalcrew.com/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jost', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        /* Content wrapper with white background */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Page Main Content */
+        .page-main {
+            padding: 40px 0;
+        }
+        
+        /* ===== SOCIAL MEDIA PAGE SPECIFIC STYLES WITH ANIMATIONS ===== */
+        
+        /* Hero Section with Animation */
+        .smm-hero {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 4px solid #cc0000;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+            50% { background: linear-gradient(135deg, #ffffff, #fff0f0); }
+            100% { background: linear-gradient(135deg, #f8f9fa, #ffffff); }
+        }
+        
+        .smm-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(204,0,0,0.03) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .smm-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .smm-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            animation: slideDown 1s ease-out;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .smm-hero h1 span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .smm-hero h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #cc0000;
+            margin-bottom: 15px;
+            animation: slideUp 1s ease-out 0.2s both;
+        }
+        
+        .smm-hero h3 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 25px;
+            animation: slideUp 1s ease-out 0.25s both;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .smm-hero h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #cc0000;
+            animation: expandWidth 1.5s ease-out infinite;
+        }
+        
+        @keyframes expandWidth {
+            0% { width: 50px; opacity: 0.5; }
+            50% { width: 120px; opacity: 1; }
+            100% { width: 50px; opacity: 0.5; }
+        }
+        
+        .smm-hero p {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 18px;
+            line-height: 1.8;
+            animation: fadeIn 1.5s ease-out 0.3s both;
+        }
+        
+        /* Quick Connect with Animation */
+        .quick-connect {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            margin: 40px auto;
+            border-radius: 15px;
+            max-width: 800px;
+            border-left: 5px solid #cc0000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: perspective(1000px) rotateX(0deg);
+            transition: all 0.5s;
+            animation: glow 2s infinite;
+        }
+        
+        .quick-connect:hover {
+            transform: perspective(1000px) rotateX(2deg) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(204,0,0,0.2);
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+            50% { box-shadow: 0 15px 40px rgba(204,0,0,0.15); }
+            100% { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        }
+        
+        .quick-connect h3 {
+            color: #000;
+            font-size: 26px;
+            margin-bottom: 5px;
+            animation: slideInRight 1s;
+        }
+        
+        .quick-connect p {
+            font-size: 18px;
+            color: #555;
+        }
+        
+        /* Section Title with Animation */
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+            animation: fadeInScale 1s;
+        }
+        
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .section-title span {
+            color: #cc0000;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #cc0000;
+            animation: slideLine 3s ease infinite;
+        }
+        
+        @keyframes slideLine {
+            0% { width: 0; left: 0; }
+            50% { width: 100%; left: 0; }
+            100% { width: 0; left: 100%; }
+        }
+        
+        /* Intro Box */
+        .intro-box {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            border: 2px solid #cc0000;
+            box-shadow: 0 15px 40px rgba(204,0,0,0.1);
+            animation: glow 3s infinite;
+        }
+        
+        .intro-box p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        /* Brands Section */
+        .brands-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .brands-section h3 {
+            font-size: 28px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        
+        .brands-section h3 span {
+            color: #cc0000;
+        }
+        
+        .brands-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .brand-item {
+            background: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            border: 2px solid #cc0000;
+            font-size: 20px;
+            font-weight: 600;
+            color: #cc0000;
+            transition: all 0.3s;
+            animation: float 3s ease infinite;
+        }
+        
+        .brand-item:nth-child(1) { animation-delay: 0.1s; }
+        .brand-item:nth-child(2) { animation-delay: 0.2s; }
+        
+        .brand-item:hover {
+            background: #cc0000;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Why Trust Section */
+        .why-trust {
+            padding: 40px 0;
+        }
+        
+        .trust-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 20px;
+            border-left: 5px solid #cc0000;
+            animation: slideInRight 1s;
+        }
+        
+        .trust-content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        /* What's Included Section */
+        .included-section {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 60px 20px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .included-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, transparent, #cc0000, transparent);
+            animation: slideBorder 3s linear infinite;
+        }
+        
+        @keyframes slideBorder {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .included-grid {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+        
+        .included-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .included-card:nth-child(1) { animation-delay: 0.1s; }
+        .included-card:nth-child(2) { animation-delay: 0.15s; }
+        .included-card:nth-child(3) { animation-delay: 0.2s; }
+        .included-card:nth-child(4) { animation-delay: 0.25s; }
+        .included-card:nth-child(5) { animation-delay: 0.3s; }
+        .included-card:nth-child(6) { animation-delay: 0.35s; }
+        
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .included-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #cc0000;
+            box-shadow: 0 20px 40px rgba(204,0,0,0.15);
+        }
+        
+        .included-card .card-letter {
+            font-size: 36px;
+            font-weight: 800;
+            color: #cc0000;
+            margin-bottom: 15px;
+        }
+        
+        .included-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        
+        .included-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 60px 20px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stat-item {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            animation: cardAppear 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .stat-item:nth-child(1) { animation-delay: 0.1s; }
+        .stat-item:nth-child(2) { animation-delay: 0.15s; }
+        .stat-item:nth-child(3) { animation-delay: 0.2s; }
+        
+        .stat-item i {
+            font-size: 50px;
+            color: #ffd966;
+            margin-bottom: 15px;
+        }
+        
+        .stat-item h4 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        
+        .stat-item p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            margin: 40px 0;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.3s;
+            animation: slideUp 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .faq-item:nth-child(1) { animation-delay: 0.1s; }
+        .faq-item:nth-child(2) { animation-delay: 0.15s; }
+        .faq-item:nth-child(3) { animation-delay: 0.2s; }
+        .faq-item:nth-child(4) { animation-delay: 0.25s; }
+        .faq-item:nth-child(5) { animation-delay: 0.3s; }
+        .faq-item:nth-child(6) { animation-delay: 0.35s; }
+        .faq-item:nth-child(7) { animation-delay: 0.4s; }
+        .faq-item:nth-child(8) { animation-delay: 0.45s; }
+        .faq-item:nth-child(9) { animation-delay: 0.5s; }
+        .faq-item:nth-child(10) { animation-delay: 0.55s; }
+        
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            background: #f9f9f9;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #000;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #f0f0f0;
+            padding-left: 35px;
+        }
+        
+        .faq-question i {
+            color: #cc0000;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px 25px;
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #cc0000, #8b0000);
+            padding: 70px 20px;
+            text-align: center;
+            margin: 50px 0 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse-bg 3s infinite;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            animation: slideInLeft 1s;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            position: relative;
+            animation: slideInRight 1s;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            animation: fadeIn 1.5s;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #cc0000;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.4s;
+            border: 2px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(204,0,0,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: white;
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-outline:hover {
+            background: white;
+            color: #cc0000;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .smm-hero h1 {
+                font-size: 36px;
+            }
+            
+            .smm-hero h2 {
+                font-size: 28px;
+            }
+            
+            .smm-hero h3 {
+                font-size: 20px;
+            }
+            
+            .smm-hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .quick-connect h3 {
+                font-size: 22px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .brands-grid {
+                gap: 20px;
+            }
+            
+            .brand-item {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+            
+            .cta-section h2 {
+                font-size: 32px;
+            }
+            
+            .cta-btn {
+                padding: 12px 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .smm-hero h1 {
+                font-size: 28px;
+            }
+            
+            .intro-box {
+                padding: 30px 20px;
+            }
+            
+            .intro-box p {
+                font-size: 16px;
+            }
+        }
+        
+        /* Animation Classes */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Footer placeholder */
+        #footer {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content wrapper with white background -->
+    <div class="content-wrapper">
+        <!-- HEADER PLACEHOLDER - Your existing header will load here -->
+        <div id="header"></div>
+
+        <!-- SOCIAL MEDIA PAGE MAIN CONTENT -->
+        <main class="page-main">
+            <!-- Hero Section -->
+            <div class="smm-hero">
+                <div class="container">
+                    <h1>Build Visibility, Earn Trust & Drive Sales with Social Media Management Services</h1>
+                    <h2>Boost Your Brand with Your Digital Crew – Social Media Management Company in India</h2>
+                    <h3>Social media Service in Delhi</h3>
+                    <p>In today's digital world, where attention spans are shrinking and competition is endless, your brand has only a few seconds to grab attention—or risk being ignored. That's where Your Digital Crew steps in. We don't just manage accounts; we craft strategies that help your brand dominate social media platforms like Instagram, Facebook, LinkedIn, Twitter (X), and YouTube.</p>
+                    <p style="margin-top: 20px;">At Your Digital Crew, we don't believe in random posts or one-size-fits-all content calendars. Instead, we focus on data-driven strategy, storytelling, and conversions. Our social media management services in India are designed to deliver one outcome—growth. From building strong brand awareness to driving quality leads, we transform your social presence into a powerful business growth engine.</p>
+                </div>
+            </div>
+
+            <!-- Quick Connect -->
+            <div class="container">
+                <div class="quick-connect" data-aos="flip-up">
+                    <h3>Quick Connect</h3>
+                    <p>Your Digital Crew – Leading Social Media Management Company in India</p>
+                </div>
+            </div>
+
+            <!-- Brands We Work With -->
+            <div class="container">
+                <div class="brands-section">
+                    <h3>Brands <span>We Work With</span></h3>
+                    <div class="brands-grid">
+                        <div class="brand-item">Style Look</div>
+                        <div class="brand-item">Deva Sena logi</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Businesses Trust -->
+            <div class="why-trust">
+                <div class="container">
+                    <h2 class="section-title">Why Businesses <span>Trust Your Digital Crew</span> for Social Media Marketing in India</h2>
+                    
+                    <div class="trust-content">
+                        <p>When it comes to social media marketing in India, businesses across Delhi and beyond trust Your Digital Crew to deliver measurable results. We don't just create posts—we build strategies that connect brands with the right audience at the right time. Our Delhi-based digital marketing experts understand local market trends while also aligning with global strategies, ensuring your brand stands out on platforms like Instagram, Facebook, LinkedIn, Twitter, and YouTube. From startups to established companies, businesses choose Your Digital Crew because we combine creativity, analytics, and innovation to transform social media into a consistent growth channel.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What's Included -->
+            <div class="included-section">
+                <div class="container">
+                    <h2 class="section-title">What's Included in Our <span>Social Media Service</span> Game Plan</h2>
+                    <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #555;">When you choose Your Digital Crew as your social media partner, you get more than just posting support—you get a full-fledged strategy designed to grow your business online. Our services are built to help brands in India and across the globe stand out in an overcrowded digital space.</p>
+                    
+                    <div class="included-grid">
+                        <div class="included-card">
+                            <div class="card-letter">A</div>
+                            <h4>Tailored Strategy Development</h4>
+                            <p>We research your industry, competitors, and audience to create a customized roadmap.</p>
+                        </div>
+                        
+                        <div class="included-card">
+                            <div class="card-letter">B</div>
+                            <h4>Content Creation & Scheduling</h4>
+                            <p>High-quality posts, graphics, reels, and videos designed to engage and convert.</p>
+                        </div>
+                        
+                        <div class="included-card">
+                            <div class="card-letter">C</div>
+                            <h4>Platform Management</h4>
+                            <p>From Instagram and Facebook to LinkedIn, Twitter (X), and YouTube, we handle it all.</p>
+                        </div>
+                        
+                        <div class="included-card">
+                            <div class="card-letter">D</div>
+                            <h4>Community Engagement</h4>
+                            <p>Building trust by managing comments, messages, and interactions professionally.</p>
+                        </div>
+                        
+                        <div class="included-card">
+                            <div class="card-letter">E</div>
+                            <h4>Performance Tracking & Reporting</h4>
+                            <p>Transparent analytics and insights to measure growth and ROI.</p>
+                        </div>
+                        
+                        <div class="included-card">
+                            <div class="card-letter">F</div>
+                            <h4>Ad Campaign Management</h4>
+                            <p>Strategic paid advertising to reach the right audience faster.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>500%</h4>
+                            <p>Avg. Engagement Growth</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <h4>50k+</h4>
+                            <p>Followers Gained</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-smile"></i>
+                            <h4>98%</h4>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <div class="container">
+                    <h2 class="section-title">FAQs On Our <span>Social Media Management</span> Services</h2>
+                    
+                    <div class="faq-container">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Why does my business need Social Media Management?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Social media builds brand visibility, customer trust, and sales. At Your Digital Crew, we create strategies that increase engagement, generate leads, and help your business stay ahead of competitors.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 2 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How do you decide which platforms to manage for my brand?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We analyze your target audience, industry, and business goals to select the most effective platforms where your customers are most active.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 3 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Will you create content for my social media pages?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we create high-quality, engaging content including graphics, videos, reels, and copywriting tailored to your brand voice and audience preferences.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 4 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How often will you post on my social media accounts?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Posting frequency depends on your goals and platform. Typically, we recommend 4-7 posts per week across platforms for optimal engagement.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 5 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Do you also manage paid social media ads?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we offer comprehensive paid ad management including strategy, creation, targeting, optimization, and reporting for platforms like Facebook, Instagram, and LinkedIn.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 6 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Can you help increase followers organically?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! We use proven organic growth strategies including content optimization, engagement tactics, and community building to grow your follower base authentically.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 7 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Will I get reports on my social media performance?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we provide detailed monthly reports with key metrics, insights, and recommendations to track progress and ROI.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 8 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How long does it take to see results in social media marketing?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>While some results can be seen in 1-2 months, significant growth typically takes 3-6 months of consistent, strategic effort.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 9 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Do you also handle comments and messages?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we provide community management services including responding to comments, messages, and engaging with your audience to build strong relationships.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 10 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How is Your Digital Crew different from other social media agencies?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We combine data-driven strategy with creative storytelling. Our focus is on measurable results, not just vanity metrics. We provide transparent reporting and customized solutions for each client.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Contact CTA Section -->
+        <div class="cta-section">
+            <div class="container">
+                <h2>Ready to Boost Your Social Media Presence?</h2>
+                <p>Get a free social media audit and strategy consultation for your brand today</p>
+                <div class="cta-buttons">
+                    <a href="tel:+919212320203" class="cta-btn"><i class="fas fa-phone-alt"></i> Call Us: +91-9212320203</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fas fa-envelope"></i> Email Us</a>
+                    <a href="#" class="cta-btn cta-btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER PLACEHOLDER - Your existing footer will load here -->
+        <div id="footer"></div>
+    </div>
+
+    <!-- AOS Animation Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Scripts -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load Header from external file
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Header file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                // Initialize dropdown stabilizer after header loads
+                setTimeout(initDropdownStabilizer, 500);
+            })
+            .catch(err => {
+                console.warn('Header file not loaded. Please ensure header.html exists.');
+                document.getElementById('header').innerHTML = `
+                    <div style="background: #000; color: white; padding: 15px; text-align: center;">
+                        Header not loaded. Please check header.html file.
+                    </div>
+                `;
+            });
+
+        // Load Footer from external file
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Footer file not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(err => {
+                console.warn('Footer file not loaded. Using fallback footer.');
+                document.getElementById('footer').innerHTML = `
+                    <footer style="background: #000; color: white; text-align: center; padding: 30px; border-top: 3px solid #cc0000;">
+                        <p>© 2025 Your Digital Crew. All rights reserved.</p>
+                        <p><i class="fas fa-phone-alt"></i> +91-9212320203 | <i class="fas fa-envelope"></i> info@yourdigitalcrew.com</p>
+                    </footer>
+                `;
+            });
+
+        // Dropdown Stabilizer Function
+        function initDropdownStabilizer() {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const dropdown = item.querySelector('.dropdown, .mega-menu, .dropdown-submenu-content');
+                if (!dropdown) return;
+                
+                let timeoutId;
+                
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                    dropdown.style.opacity = '1';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.transform = 'translateY(4px)';
+                });
+                
+                item.addEventListener('mouseleave', (e) => {
+                    const relatedTarget = e.relatedTarget;
+                    if (dropdown.contains(relatedTarget)) return;
+                    
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 300);
+                });
+                
+                dropdown.addEventListener('mouseenter', () => {
+                    clearTimeout(timeoutId);
+                });
+                
+                dropdown.addEventListener('mouseleave', () => {
+                    timeoutId = setTimeout(() => {
+                        dropdown.style.opacity = '0';
+                        dropdown.style.visibility = 'hidden';
+                        dropdown.style.transform = 'translateY(12px)';
+                    }, 200);
+                });
+            });
+        }
+
+        // Sticky Header Function
+        function initStickyHeader() {
+            const headerWrapper = document.querySelector('.header-wrapper');
+            if (headerWrapper) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        headerWrapper.classList.add('scrolled');
+                    } else {
+                        headerWrapper.classList.remove('scrolled');
+                    }
+                });
+            }
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', function() {
+                const parent = this.closest('.faq-item');
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Call sticky header after page loads
+        window.addEventListener('load', function() {
+            initStickyHeader();
+        });
+    </script>
+</body>
+</html>
